@@ -20,6 +20,10 @@
 		430DF6EE1A1763D400764928 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430DF6ED1A1763D400764928 /* SystemConfiguration.framework */; };
 		430DF6F01A17640300764928 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430DF6EF1A17640300764928 /* Parse.framework */; };
 		430DF6F21A17640B00764928 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430DF6F11A17640B00764928 /* Bolts.framework */; };
+		431AA6E71A17D25F00B52D02 /* Club.m in Sources */ = {isa = PBXBuildFile; fileRef = 431AA6E61A17D25F00B52D02 /* Club.m */; };
+		431AA6EA1A17D2C600B52D02 /* ClubCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 431AA6E91A17D2C600B52D02 /* ClubCategory.m */; };
+		431AA6ED1A17D4B400B52D02 /* ClubCategoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 431AA6EC1A17D4B400B52D02 /* ClubCategoryManager.m */; };
+		431AA6F01A17DCAA00B52D02 /* ClubCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 431AA6EF1A17DCAA00B52D02 /* ClubCell.m */; };
 		432BA53C1A171F5000D8B173 /* ClubsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 432BA53B1A171F5000D8B173 /* ClubsTableViewController.m */; };
 		432BA53F1A172F8B00D8B173 /* CreateClubTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 432BA53E1A172F8B00D8B173 /* CreateClubTableViewController.m */; };
 		43362BEA1A17A269004F05BD /* CategoryDropdownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43362BE91A17A269004F05BD /* CategoryDropdownCell.m */; };
@@ -59,6 +63,14 @@
 		430DF6ED1A1763D400764928 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		430DF6EF1A17640300764928 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		430DF6F11A17640B00764928 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = NarWall/Bolts.framework; sourceTree = "<group>"; };
+		431AA6E51A17D25F00B52D02 /* Club.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Club.h; sourceTree = "<group>"; };
+		431AA6E61A17D25F00B52D02 /* Club.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Club.m; sourceTree = "<group>"; };
+		431AA6E81A17D2C600B52D02 /* ClubCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClubCategory.h; sourceTree = "<group>"; };
+		431AA6E91A17D2C600B52D02 /* ClubCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClubCategory.m; sourceTree = "<group>"; };
+		431AA6EB1A17D4B400B52D02 /* ClubCategoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClubCategoryManager.h; sourceTree = "<group>"; };
+		431AA6EC1A17D4B400B52D02 /* ClubCategoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClubCategoryManager.m; sourceTree = "<group>"; };
+		431AA6EE1A17DCAA00B52D02 /* ClubCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClubCell.h; sourceTree = "<group>"; };
+		431AA6EF1A17DCAA00B52D02 /* ClubCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClubCell.m; sourceTree = "<group>"; };
 		432BA53A1A171F5000D8B173 /* ClubsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClubsTableViewController.h; sourceTree = "<group>"; };
 		432BA53B1A171F5000D8B173 /* ClubsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClubsTableViewController.m; sourceTree = "<group>"; };
 		432BA53D1A172F8B00D8B173 /* CreateClubTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateClubTableViewController.h; sourceTree = "<group>"; };
@@ -159,6 +171,8 @@
 		438F95A41A173E64004C0A4F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				431AA6EE1A17DCAA00B52D02 /* ClubCell.h */,
+				431AA6EF1A17DCAA00B52D02 /* ClubCell.m */,
 				438F95A51A173E83004C0A4F /* CategoryCell.h */,
 				438F95A61A173E83004C0A4F /* CategoryCell.m */,
 			);
@@ -170,6 +184,8 @@
 			children = (
 				43362BE81A17A269004F05BD /* CategoryDropdownCell.h */,
 				43362BE91A17A269004F05BD /* CategoryDropdownCell.m */,
+				431AA6EB1A17D4B400B52D02 /* ClubCategoryManager.h */,
+				431AA6EC1A17D4B400B52D02 /* ClubCategoryManager.m */,
 				43A7ABD61A1700E500C5C6AC /* NarWall */,
 				43A7ABF01A1700E600C5C6AC /* NarWallTests */,
 				43A7ABD51A1700E500C5C6AC /* Products */,
@@ -190,6 +206,10 @@
 		43A7ABD61A1700E500C5C6AC /* NarWall */ = {
 			isa = PBXGroup;
 			children = (
+				431AA6E51A17D25F00B52D02 /* Club.h */,
+				431AA6E61A17D25F00B52D02 /* Club.m */,
+				431AA6E81A17D2C600B52D02 /* ClubCategory.h */,
+				431AA6E91A17D2C600B52D02 /* ClubCategory.m */,
 				432BA5371A171D6400D8B173 /* App Delegate */,
 				432BA5381A171D6B00D8B173 /* View Controllers */,
 				438F95A41A173E64004C0A4F /* Cells */,
@@ -395,12 +415,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				438F95A31A173D49004C0A4F /* ClubCategoryTableViewController.m in Sources */,
+				431AA6EA1A17D2C600B52D02 /* ClubCategory.m in Sources */,
 				438F95A71A173E83004C0A4F /* CategoryCell.m in Sources */,
 				43362BEA1A17A269004F05BD /* CategoryDropdownCell.m in Sources */,
 				43A7ABDD1A1700E500C5C6AC /* AppDelegate.m in Sources */,
 				43A7ABDA1A1700E500C5C6AC /* main.m in Sources */,
 				432BA53C1A171F5000D8B173 /* ClubsTableViewController.m in Sources */,
+				431AA6ED1A17D4B400B52D02 /* ClubCategoryManager.m in Sources */,
 				432BA53F1A172F8B00D8B173 /* CreateClubTableViewController.m in Sources */,
+				431AA6E71A17D25F00B52D02 /* Club.m in Sources */,
+				431AA6F01A17DCAA00B52D02 /* ClubCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

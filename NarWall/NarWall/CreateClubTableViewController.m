@@ -83,7 +83,7 @@
     club[@"meetingTimes"] = self.meetingTextField.text;
     club[@"location"] = self.locationTextField.text;
     club[@"category"] = self.categoryLabel.text;
-    club[@"description"] = self.categoryLabel.text;
+    club[@"description"] = self.descriptionLabel.text;
     [club saveInBackground];
     [self.delegate createClubTableViewController:self didSaveWithPFObject:club];
 }
