@@ -7,6 +7,23 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ITCFranklinGothicStd-Book.otf">
+            <string>ITCFranklinGothicStd-Book</string>
+            <string>ITCFranklinGothicStd-Book</string>
+        </mutableArray>
+        <mutableArray key="ITCFranklinGothicStd-Med.otf">
+            <string>ITCFranklinGothicStd-Med</string>
+            <string>ITCFranklinGothicStd-Med</string>
+            <string>ITCFranklinGothicStd-Med</string>
+            <string>ITCFranklinGothicStd-Med</string>
+            <string>ITCFranklinGothicStd-Med</string>
+            <string>ITCFranklinGothicStd-Med</string>
+            <string>ITCFranklinGothicStd-Med</string>
+            <string>ITCFranklinGothicStd-Med</string>
+            <string>ITCFranklinGothicStd-Med</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Events-->
         <scene sceneID="vbE-Tb-9w3">
@@ -80,8 +97,11 @@
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UQb-Un-mXb">
                                                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="8" y="12.5" width="384" height="19"/>
+                                                    </variation>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -122,8 +142,11 @@
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Meetings (eg every other Monday)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ba-aO-YPY">
                                                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="8" y="13.5" width="384" height="19"/>
+                                                    </variation>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -160,8 +183,11 @@
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UtH-FT-AGI">
                                                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="8" y="12.5" width="384" height="19"/>
+                                                    </variation>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -205,7 +231,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="66.5" id="TOy-gT-pku"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="16"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
@@ -213,7 +239,8 @@
                                                             <exclude reference="TOy-gT-pku"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="widthClass=compact">
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="8" y="12.5" width="66.5" height="19"/>
                                                         <mask key="constraints">
                                                             <include reference="TOy-gT-pku"/>
                                                         </mask>
@@ -221,7 +248,7 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBb-wG-9ix">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -300,17 +327,20 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VoO-Fx-0Ts">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="16"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" ambiguous="YES">
+                                                        <rect key="frame" x="8" y="13" width="78" height="16"/>
+                                                    </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ho5-5n-8fa">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                                        <rect key="frame" x="101" y="12" width="258" height="20.5"/>
+                                                    <variation key="widthClass=compact" ambiguous="YES">
+                                                        <rect key="frame" x="96" y="22.5" width="263" height="0.0"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -418,9 +448,12 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outdoors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAo-n0-ivO">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="45" y="11" width="347" height="20"/>
+                                            </variation>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outdoors" translatesAutoresizingMaskIntoConstraints="NO" id="jWo-BH-ljM">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -525,15 +558,50 @@
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryDropdownCell" rowHeight="44" id="Mra-23-MNK" customClass="CategoryDropdownCell">
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mra-23-MNK" id="1rJ-FI-PQi">
+                                <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mra-23-MNK" id="1rJ-FI-PQi">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outdoors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UU-dF-FMR">
-                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Aw-yv-Hcn">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outdoors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UU-dF-FMR">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="22"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="45" y="11" width="93" height="26"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.9882352941176471" green="0.62352941176470589" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="0UU-dF-FMR" firstAttribute="leading" secondItem="2Aw-yv-Hcn" secondAttribute="leading" constant="52" id="01Z-Hm-EeP">
+                                                    <variation key="widthClass=compact" constant="45"/>
+                                                </constraint>
+                                                <constraint firstAttribute="centerY" secondItem="0UU-dF-FMR" secondAttribute="centerY" constant="0.5" id="mnn-fr-IvB">
+                                                    <variation key="widthClass=compact" constant="-2"/>
+                                                </constraint>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="0UU-dF-FMR"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="01Z-Hm-EeP"/>
+                                                    <exclude reference="mnn-fr-IvB"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="0UU-dF-FMR"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="01Z-Hm-EeP"/>
+                                                    <include reference="mnn-fr-IvB"/>
+                                                </mask>
+                                            </variation>
+                                        </view>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outdoors" translatesAutoresizingMaskIntoConstraints="NO" id="pHe-9b-fG4">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                             <constraints>
@@ -567,51 +635,55 @@
                                             </variation>
                                         </imageView>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.9882352941176471" green="0.44313725490196076" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstItem="Aff-hq-38U" firstAttribute="top" secondItem="1rJ-FI-PQi" secondAttribute="topMargin" constant="3" id="3iw-ac-GNN"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="pHe-9b-fG4" secondAttribute="bottom" constant="-0.5" id="ChL-Bb-tgt"/>
-                                        <constraint firstItem="0UU-dF-FMR" firstAttribute="leading" secondItem="pHe-9b-fG4" secondAttribute="trailing" constant="8" id="EcI-qg-pHC"/>
+                                        <constraint firstItem="2Aw-yv-Hcn" firstAttribute="leading" secondItem="1rJ-FI-PQi" secondAttribute="leadingMargin" constant="-8" id="To8-w1-81P"/>
                                         <constraint firstItem="pHe-9b-fG4" firstAttribute="leading" secondItem="1rJ-FI-PQi" secondAttribute="leadingMargin" id="UUn-pG-E5x"/>
+                                        <constraint firstItem="2Aw-yv-Hcn" firstAttribute="top" secondItem="1rJ-FI-PQi" secondAttribute="topMargin" constant="-7.5" id="WZs-c5-bcB"/>
                                         <constraint firstItem="Aff-hq-38U" firstAttribute="trailing" secondItem="1rJ-FI-PQi" secondAttribute="trailingMargin" id="lGT-FO-Iy7"/>
-                                        <constraint firstItem="0UU-dF-FMR" firstAttribute="top" secondItem="1rJ-FI-PQi" secondAttribute="topMargin" constant="3" id="mXz-Iw-m8V"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="2Aw-yv-Hcn" secondAttribute="bottom" constant="-8.5" id="m1q-Np-ZyC"/>
                                         <constraint firstAttribute="centerY" secondItem="Aff-hq-38U" secondAttribute="centerY" id="nv8-MF-hbG"/>
-                                        <constraint firstItem="0UU-dF-FMR" firstAttribute="leading" secondItem="1rJ-FI-PQi" secondAttribute="leading" constant="45" id="qMT-dc-Nco"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="2Aw-yv-Hcn" secondAttribute="trailing" constant="-8" id="oTb-Nz-9k5"/>
                                         <constraint firstItem="pHe-9b-fG4" firstAttribute="top" secondItem="1rJ-FI-PQi" secondAttribute="topMargin" id="xnh-Bu-UOK"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="subviews">
-                                            <exclude reference="0UU-dF-FMR"/>
+                                            <exclude reference="2Aw-yv-Hcn"/>
                                             <exclude reference="pHe-9b-fG4"/>
                                             <exclude reference="Aff-hq-38U"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="EcI-qg-pHC"/>
-                                            <exclude reference="mXz-Iw-m8V"/>
-                                            <exclude reference="qMT-dc-Nco"/>
                                             <exclude reference="3iw-ac-GNN"/>
                                             <exclude reference="lGT-FO-Iy7"/>
                                             <exclude reference="nv8-MF-hbG"/>
                                             <exclude reference="ChL-Bb-tgt"/>
                                             <exclude reference="UUn-pG-E5x"/>
                                             <exclude reference="xnh-Bu-UOK"/>
+                                            <exclude reference="To8-w1-81P"/>
+                                            <exclude reference="WZs-c5-bcB"/>
+                                            <exclude reference="m1q-Np-ZyC"/>
+                                            <exclude reference="oTb-Nz-9k5"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
                                         <mask key="subviews">
-                                            <include reference="0UU-dF-FMR"/>
+                                            <include reference="2Aw-yv-Hcn"/>
                                             <include reference="pHe-9b-fG4"/>
                                             <include reference="Aff-hq-38U"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="EcI-qg-pHC"/>
-                                            <include reference="mXz-Iw-m8V"/>
-                                            <include reference="qMT-dc-Nco"/>
                                             <include reference="3iw-ac-GNN"/>
                                             <include reference="lGT-FO-Iy7"/>
                                             <include reference="nv8-MF-hbG"/>
                                             <include reference="ChL-Bb-tgt"/>
                                             <include reference="UUn-pG-E5x"/>
                                             <include reference="xnh-Bu-UOK"/>
+                                            <include reference="To8-w1-81P"/>
+                                            <include reference="WZs-c5-bcB"/>
+                                            <include reference="m1q-Np-ZyC"/>
+                                            <include reference="oTb-Nz-9k5"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
@@ -632,7 +704,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="41" id="Pew-Tz-X9s"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Book" family="ITC Franklin Gothic Std" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
@@ -640,7 +712,8 @@
                                                     <exclude reference="Pew-Tz-X9s"/>
                                                 </mask>
                                             </variation>
-                                            <variation key="widthClass=compact">
+                                            <variation key="widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="8" y="30" width="384" height="41"/>
                                                 <mask key="constraints">
                                                     <include reference="Pew-Tz-X9s"/>
                                                 </mask>
@@ -648,12 +721,15 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="384" translatesAutoresizingMaskIntoConstraints="NO" id="xM8-SZ-rWG">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                            <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Book" family="ITC Franklin Gothic Std" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="8" y="8" width="384" height="21"/>
+                                            </variation>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.90121527777777777" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="0.99607843137254903" green="0.8784313725490196" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstItem="xM8-SZ-rWG" firstAttribute="top" secondItem="ffT-gw-idK" secondAttribute="topMargin" id="6eU-LD-y1B"/>
                                         <constraint firstItem="OzO-YK-0SI" firstAttribute="leading" secondItem="ffT-gw-idK" secondAttribute="leadingMargin" id="jus-H4-KPp"/>
@@ -723,7 +799,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="detailDisclosure" width="43" height="42"/>
+        <image name="detailDisclosure" width="12" height="12"/>
         <image name="outdoors" width="510" height="594"/>
     </resources>
 </document>
