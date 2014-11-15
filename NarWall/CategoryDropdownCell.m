@@ -20,18 +20,17 @@
 @implementation CategoryDropdownCell
 
 -(void)willMoveToSuperview:(UIView *)newSuperview {
-    
-    [self spinWithOptions:UIViewAnimationOptionCurveEaseInOut];
+    //[self spinWithOptions:UIViewAnimationOptionCurveEaseInOut];
 }
 
 - (void) spinWithOptions: (UIViewAnimationOptions) options {
     
     [UIView animateWithDuration: 0.5f
-                          delay: 2.0f
+                          delay: 0
                         options: options
                      animations: ^{
-                         self.disclosureView.transform = CGAffineTransformMakeRotation(M_PI);
-//                         self.disclosureView.transform = CGAffineTransformRotate(self.disclosureView.transform, M_PI);
+//                         self.disclosureView.transform = CGAffineTransformMakeRotation(M_PI);
+                        self.disclosureView.transform = CGAffineTransformRotate(self.disclosureView.transform, M_PI);
                      }
                      completion: ^(BOOL finished) {
 //                         if (finished) {

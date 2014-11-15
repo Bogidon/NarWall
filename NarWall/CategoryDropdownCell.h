@@ -6,13 +6,11 @@
 //  Copyright (c) 2014 New School Crew. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface CategoryDropdownCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *disclosureView;
-
-
-
+-(void)spinWithOptions:(UIViewAnimationOptions)options;
 @end
