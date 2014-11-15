@@ -24,6 +24,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>ITCFranklinGothicStd-Book.otf</string>
 		<string>ITCFranklinGothicStd-Hvy.otf</string>
 		<string>ITCFranklinGothicStd-Med.otf</string>
 	</array>

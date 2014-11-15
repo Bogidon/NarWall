@@ -20,6 +20,8 @@
 @implementation CategoryDropdownCell
 
 -(void)willMoveToSuperview:(UIView *)newSuperview {
+    self.contentView.backgroundColor = [UIColor colorWithRed:252/255.0 green:113/255.0 blue:73/255.0 alpha:1.0];
+    self.backgroundColor = [UIColor colorWithRed:252/255.0 green:113/255.0 blue:73/255.0 alpha:1.0];
 }
 
 - (void) spinWithOptions: (UIViewAnimationOptions) options {
