@@ -440,24 +440,6 @@
 				432BA53C1A171F5000D8B173 /* ClubsTableViewController.m in Sources */,
 				431AA6ED1A17D4B400B52D02 /* ClubCategoryManager.m in Sources */,
 				432BA53F1A172F8B00D8B173 /* CreateClubTableViewController.m in Sources */,
-
-
-
-
-
-
-
-
-
-				/* These next 3 lines cause a merge conflict. Look here if something breaks */
-
-
-
-
-
-
-
-
 				4C60C3811A17FDFC00960F7F /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				431AA6E71A17D25F00B52D02 /* Club.m in Sources */,
 				431AA6F01A17DCAA00B52D02 /* ClubCell.m in Sources */,
