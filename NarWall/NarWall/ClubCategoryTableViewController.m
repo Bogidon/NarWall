@@ -21,10 +21,11 @@
     [super viewDidLoad];
     
     categoryTypes = [NSArray arrayWithObjects:
-                     @"Fashion",
-                     @"Outdoors",
-                     @"Social",
-                     @"Tech",
+                     @"Favorites",
+                     @"Social & Interests",
+                     @"Academic",
+                     @"Art, Music, Performance"
+                     @"",
                      nil];
 }
 
