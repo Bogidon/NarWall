@@ -8,12 +8,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
-      <!-- The following lines were the source of a merge conflict.
-<<<<<<< HEAD -->
-        <mutableArray key="ITCFranklinGothicStd-Med.otf">
-            <string>ITCFranklinGothicStd-Med</string>
-            <string>ITCFranklinGothicStd-Med</string>
-<!--=======
         <mutableArray key="ITCFranklinGothicStd-Book.otf">
             <string>ITCFranklinGothicStd-Book</string>
             <string>ITCFranklinGothicStd-Book</string>
@@ -28,7 +22,8 @@
             <string>ITCFranklinGothicStd-Med</string>
             <string>ITCFranklinGothicStd-Med</string>
             <string>ITCFranklinGothicStd-Med</string>
->>>>>>> 86d57fa1d35d5435294cb6ba9f477f39c783f75d -->
+            <string>ITCFranklinGothicStd-Med</string>
+            <string>ITCFranklinGothicStd-Med</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -150,27 +145,29 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abg-TD-9Ax">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abg-TD-9Ax">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Egm-P5-v17"/>
-                                            <constraint firstAttribute="width" constant="68" id="yoa-9v-6DS"/>
+                                            <constraint firstAttribute="width" constant="162" id="VKr-Rz-KDg"/>
+                                            <constraint firstAttribute="height" constant="55" id="YD6-hp-HO1"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
-                                        <state key="normal" title="Log In">
+                                        <state key="normal" image="login">
                                             <color key="titleColor" red="0.99215686270000003" green="0.63529411759999999" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" red="0.99215686274509807" green="0.63529411764705879" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <state key="selected" image="login-pressed"/>
+                                        <state key="highlighted" image="login-pressed"/>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="Egm-P5-v17"/>
-                                                <exclude reference="yoa-9v-6DS"/>
+                                                <exclude reference="VKr-Rz-KDg"/>
+                                                <exclude reference="YD6-hp-HO1"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact">
                                             <mask key="constraints">
-                                                <include reference="Egm-P5-v17"/>
-                                                <include reference="yoa-9v-6DS"/>
+                                                <include reference="VKr-Rz-KDg"/>
+                                                <include reference="YD6-hp-HO1"/>
                                             </mask>
                                         </variation>
                                     </button>
@@ -182,13 +179,13 @@
                                     <constraint firstAttribute="trailing" secondItem="tzh-bz-wAs" secondAttribute="trailing" constant="77" id="Jw0-Gc-JwE"/>
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="abg-TD-9Ax" secondAttribute="bottom" constant="4" id="LlM-5I-X1A"/>
                                     <constraint firstItem="qPQ-Vt-Kcv" firstAttribute="top" secondItem="6Uf-VV-okY" secondAttribute="bottom" constant="-3" id="NiJ-cw-EEJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="abg-TD-9Ax" secondAttribute="bottom" priority="250" constant="195" id="V88-yi-Sbh"/>
                                     <constraint firstItem="abg-TD-9Ax" firstAttribute="top" secondItem="qPQ-Vt-Kcv" secondAttribute="bottom" constant="8" id="adg-Xa-o6v"/>
                                     <constraint firstAttribute="centerX" secondItem="6Uf-VV-okY" secondAttribute="centerX" id="hcC-Y4-dAV"/>
                                     <constraint firstAttribute="centerX" secondItem="qPQ-Vt-Kcv" secondAttribute="centerX" id="kkC-z6-Z49"/>
                                     <constraint firstAttribute="centerX" secondItem="Itc-qh-4Yd" secondAttribute="centerX" id="nuH-0L-AWL"/>
                                     <constraint firstAttribute="centerX" secondItem="abg-TD-9Ax" secondAttribute="centerX" id="uuk-tL-xSr"/>
                                     <constraint firstItem="6Uf-VV-okY" firstAttribute="top" secondItem="Itc-qh-4Yd" secondAttribute="bottom" constant="8" id="w4p-KS-oZY"/>
-                                    <constraint firstAttribute="bottom" secondItem="abg-TD-9Ax" secondAttribute="bottom" priority="250" constant="220" id="wK3-oS-EGR"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -199,19 +196,19 @@
                                         <exclude reference="abg-TD-9Ax"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <exclude reference="Glz-8g-0oK"/>
+                                        <exclude reference="Jw0-Gc-JwE"/>
+                                        <exclude reference="EcN-bR-T1A"/>
+                                        <exclude reference="nuH-0L-AWL"/>
                                         <exclude reference="9A3-PR-UQq"/>
                                         <exclude reference="hcC-Y4-dAV"/>
                                         <exclude reference="w4p-KS-oZY"/>
-                                        <exclude reference="EcN-bR-T1A"/>
-                                        <exclude reference="nuH-0L-AWL"/>
                                         <exclude reference="NiJ-cw-EEJ"/>
                                         <exclude reference="kkC-z6-Z49"/>
-                                        <exclude reference="Glz-8g-0oK"/>
-                                        <exclude reference="Jw0-Gc-JwE"/>
                                         <exclude reference="LlM-5I-X1A"/>
+                                        <exclude reference="V88-yi-Sbh"/>
                                         <exclude reference="adg-Xa-o6v"/>
                                         <exclude reference="uuk-tL-xSr"/>
-                                        <exclude reference="wK3-oS-EGR"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -223,19 +220,19 @@
                                         <include reference="abg-TD-9Ax"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <include reference="Glz-8g-0oK"/>
+                                        <include reference="Jw0-Gc-JwE"/>
+                                        <include reference="EcN-bR-T1A"/>
+                                        <include reference="nuH-0L-AWL"/>
                                         <include reference="9A3-PR-UQq"/>
                                         <include reference="hcC-Y4-dAV"/>
                                         <include reference="w4p-KS-oZY"/>
-                                        <include reference="EcN-bR-T1A"/>
-                                        <include reference="nuH-0L-AWL"/>
                                         <include reference="NiJ-cw-EEJ"/>
                                         <include reference="kkC-z6-Z49"/>
-                                        <include reference="Glz-8g-0oK"/>
-                                        <include reference="Jw0-Gc-JwE"/>
                                         <include reference="LlM-5I-X1A"/>
+                                        <include reference="V88-yi-Sbh"/>
                                         <include reference="adg-Xa-o6v"/>
                                         <include reference="uuk-tL-xSr"/>
-                                        <include reference="wK3-oS-EGR"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -247,6 +244,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <state key="normal" title="Sign Up!">
+                                    <color key="titleColor" red="0.99215686270000003" green="0.63529411759999999" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -272,7 +270,7 @@
                                     <constraint firstAttribute="height" constant="21" id="UG1-6A-CrW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -1218,6 +1216,8 @@
     </scenes>
     <resources>
         <image name="detailDisclosure" width="12" height="12"/>
+        <image name="login" width="111" height="55"/>
+        <image name="login-pressed" width="48" height="26"/>
         <image name="outdoors" width="510" height="594"/>
     </resources>
 </document>

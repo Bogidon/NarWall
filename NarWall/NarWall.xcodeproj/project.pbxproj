@@ -226,14 +226,11 @@
 		43A7ABD71A1700E500C5C6AC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				4C60C37C1A17FDFC00960F7F /* TPKeyboardAvoidingScrollView.h */,
 				4C60C37D1A17FDFC00960F7F /* TPKeyboardAvoidingScrollView.m */,
 				4C60C37E1A17FDFC00960F7F /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
 				4C60C37F1A17FDFC00960F7F /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
 				4C60C3711A171AFB00960F7F /* Custom Fonts */,
-=======
->>>>>>> 86d57fa1d35d5435294cb6ba9f477f39c783f75d
 				43A7ABD81A1700E500C5C6AC /* Info.plist */,
 				43A7ABD91A1700E500C5C6AC /* main.m */,
 			);
