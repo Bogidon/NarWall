@@ -6,8 +6,10 @@
 //  Copyright (c) 2014 New School Crew. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+
 @property (strong, nonatomic) UIWindow *window;
 @end
 

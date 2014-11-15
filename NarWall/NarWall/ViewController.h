@@ -6,6 +6,10 @@
 //  Copyright (c) 2014 New School Crew. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
+
 @interface ViewController : UIViewController
+
+
 @end
+
