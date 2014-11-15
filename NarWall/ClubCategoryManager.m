@@ -26,7 +26,7 @@
     
     ClubCategory *newCategory = [[ClubCategory alloc] init];
     newCategory.name = categoryName;
-    newCategory.isVisible = YES;
+    newCategory.isVisible = NO;
     [newCategory addClub:club];
     [self addCategory:newCategory];
 }

@@ -28,6 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = [UIColor colorWithRed:255/255.0 green:246/255.0 blue:229/255.0 alpha:1.0];
     self.title = @"Clubs";
     self.clubCategoryManager = [[ClubCategoryManager alloc] init];
     clubs = [NSMutableArray array];
@@ -48,15 +49,6 @@
             NSLog(@"%@", error);
         }
     }];
-    
-    //Solely for height calculation
-    totalArray = [NSMutableArray array];
-    int i = 0;
-    for (NSMutableArray *array in clubs) {
-        NSMutableArray *combinedArray = [NSMutableArray arrayWithArray:array];
-        [combinedArray insertObject:[categories objectAtIndex:i] atIndex:0];
-        i++;
-    }
     
     //Configure settings button
     self.settingsBarButtonItem.title = @"\u2699";
@@ -94,6 +86,8 @@
         if (iconImage) {
             cell.iconImageView.image = iconImage;
         }
+        
+        cell.clubCategory = self.clubCategoryManager.categories[indexPath.section];
                               
         return cell;
         
@@ -109,7 +103,46 @@
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     CategoryDropdownCell *cell = (CategoryDropdownCell *)[tableView cellForRowAtIndexPath:indexPath];
     [cell spinWithOptions:UIViewAnimationOptionCurveEaseOut];
+    
+    cell.clubCategory.isVisible = !cell.clubCategory.isVisible;
+    
+    NSMutableArray *indexPaths = [NSMutableArray array];
+    for (int i = 0; i < cell.clubCategory.clubs.count ; i++) {
+        [indexPaths addObject: [NSIndexPath indexPathForRow:i+1 inSection:indexPath.section]];
+    }
+    
+    if (cell.clubCategory.isVisible) {
+        [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
+    } else {
+        [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
+
+#pragma mark - No Inner-Section Space Hack
+- (CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return 6.0;
+    }
+    
+    return 1.0;
+}
+
+- (CGFloat)tableView:(UITableView*)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 5.0;
+}
+
+- (UIView*)tableView:(UITableView*)tableView viewForHeaderInSection:(NSInteger)section
+{
+    return [[UIView alloc] initWithFrame:CGRectZero];
+}
+
+- (UIView*)tableView:(UITableView*)tableView viewForFooterInSection:(NSInteger)section
+{
+    return [[UIView alloc] initWithFrame:CGRectZero];
+}
+
 #pragma mark - Settings Pane
 - (IBAction)toggleSettingsPane:(UIBarButtonItem *)sender {
     UIActionSheet *settingsActionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Add", @"Categories", @"Sign Out", nil];

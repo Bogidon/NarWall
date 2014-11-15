@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 New School Crew. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @end
 
-//Global font names: ITCFranklinGothicStd-Med, ITC Franklin Gothic Std Heavy
+//Global font names: ITCFranklinGothicStd-Med, ITC Franklin Gothic Std Heavy, ITC Franklin Gothic Std Book
