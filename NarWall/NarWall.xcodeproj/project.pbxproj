@@ -36,6 +36,9 @@
 		43A7ABF41A1700E600C5C6AC /* NarWallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A7ABF31A1700E600C5C6AC /* NarWallTests.m */; };
 		4C60C3731A171B1700960F7F /* ITCFranklinGothicStd-Hvy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60C3721A171B1600960F7F /* ITCFranklinGothicStd-Hvy.otf */; };
 		4C60C3751A171BAB00960F7F /* ITCFranklinGothicStd-Med.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60C3741A171BAB00960F7F /* ITCFranklinGothicStd-Med.otf */; };
+		4C60C37B1A17F95100960F7F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60C37A1A17F95100960F7F /* LoginViewController.m */; };
+		4C60C3801A17FDFC00960F7F /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60C37D1A17FDFC00960F7F /* TPKeyboardAvoidingScrollView.m */; };
+		4C60C3811A17FDFC00960F7F /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60C37F1A17FDFC00960F7F /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +95,12 @@
 		43A7ABF31A1700E600C5C6AC /* NarWallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NarWallTests.m; sourceTree = "<group>"; };
 		4C60C3721A171B1600960F7F /* ITCFranklinGothicStd-Hvy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ITCFranklinGothicStd-Hvy.otf"; sourceTree = "<group>"; };
 		4C60C3741A171BAB00960F7F /* ITCFranklinGothicStd-Med.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ITCFranklinGothicStd-Med.otf"; sourceTree = "<group>"; };
+		4C60C3791A17F95000960F7F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		4C60C37A1A17F95100960F7F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4C60C37C1A17FDFC00960F7F /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		4C60C37D1A17FDFC00960F7F /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		4C60C37E1A17FDFC00960F7F /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		4C60C37F1A17FDFC00960F7F /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		8CAD519335B149929D712077 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9F8BA2EFD9B94BC2A98630A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +157,8 @@
 		432BA5381A171D6B00D8B173 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4C60C3791A17F95000960F7F /* LoginViewController.h */,
+				4C60C37A1A17F95100960F7F /* LoginViewController.m */,
 				432BA5391A171D7200D8B173 /* Clubs */,
 			);
 			name = "View Controllers";
@@ -215,6 +226,11 @@
 		43A7ABD71A1700E500C5C6AC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4C60C37C1A17FDFC00960F7F /* TPKeyboardAvoidingScrollView.h */,
+				4C60C37D1A17FDFC00960F7F /* TPKeyboardAvoidingScrollView.m */,
+				4C60C37E1A17FDFC00960F7F /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				4C60C37F1A17FDFC00960F7F /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+				4C60C3711A171AFB00960F7F /* Custom Fonts */,
 				43A7ABD81A1700E500C5C6AC /* Info.plist */,
 				43A7ABD91A1700E500C5C6AC /* main.m */,
 			);
@@ -427,15 +443,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C60C37B1A17F95100960F7F /* LoginViewController.m in Sources */,
 				438F95A31A173D49004C0A4F /* ClubCategoryTableViewController.m in Sources */,
 				431AA6EA1A17D2C600B52D02 /* ClubCategory.m in Sources */,
 				438F95A71A173E83004C0A4F /* CategoryCell.m in Sources */,
 				43362BEA1A17A269004F05BD /* CategoryDropdownCell.m in Sources */,
 				43A7ABDD1A1700E500C5C6AC /* AppDelegate.m in Sources */,
 				43A7ABDA1A1700E500C5C6AC /* main.m in Sources */,
+				4C60C3801A17FDFC00960F7F /* TPKeyboardAvoidingScrollView.m in Sources */,
 				432BA53C1A171F5000D8B173 /* ClubsTableViewController.m in Sources */,
 				431AA6ED1A17D4B400B52D02 /* ClubCategoryManager.m in Sources */,
 				432BA53F1A172F8B00D8B173 /* CreateClubTableViewController.m in Sources */,
+				4C60C3811A17FDFC00960F7F /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				431AA6E71A17D25F00B52D02 /* Club.m in Sources */,
 				431AA6F01A17DCAA00B52D02 /* ClubCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
