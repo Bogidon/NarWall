@@ -10,3 +10,5 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 @property (strong, nonatomic) UIWindow *window;
 @end
+
+//Global font names: ITCFranklinGothicStd-Med, ITC Franklin Gothic Std Heavy
