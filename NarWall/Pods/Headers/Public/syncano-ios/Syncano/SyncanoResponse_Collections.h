@@ -1,1 +1,0 @@
-../../../../syncano-ios/Syncano/Responses/Collections/SyncanoResponse_Collections.h

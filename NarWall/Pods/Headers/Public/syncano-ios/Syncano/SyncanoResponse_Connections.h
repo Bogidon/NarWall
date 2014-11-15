@@ -1,1 +1,0 @@
-../../../../syncano-ios/Syncano/Responses/Connections/SyncanoResponse_Connections.h
