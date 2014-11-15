@@ -1,1 +1,0 @@
-../../../syncano-ios/Syncano/Responses/Users/SyncanoResponse_Users.h

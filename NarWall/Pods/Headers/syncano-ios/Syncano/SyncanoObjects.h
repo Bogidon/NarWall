@@ -1,1 +1,0 @@
-../../../syncano-ios/Syncano/Objects/SyncanoObjects.h
