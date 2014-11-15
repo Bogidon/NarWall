@@ -54,6 +54,12 @@
 #define COCOAPODS_VERSION_MINOR_CocoaAsyncSocket 3
 #define COCOAPODS_VERSION_PATCH_CocoaAsyncSocket 3
 
+// MTTextViewController
+#define COCOAPODS_POD_AVAILABLE_MTTextViewController
+#define COCOAPODS_VERSION_MAJOR_MTTextViewController 0
+#define COCOAPODS_VERSION_MINOR_MTTextViewController 1
+#define COCOAPODS_VERSION_PATCH_MTTextViewController 0
+
 // Mantle
 #define COCOAPODS_POD_AVAILABLE_Mantle
 #define COCOAPODS_VERSION_MAJOR_Mantle 1
@@ -65,6 +71,12 @@
 #define COCOAPODS_VERSION_MAJOR_Mantle_extobjc 1
 #define COCOAPODS_VERSION_MINOR_Mantle_extobjc 4
 #define COCOAPODS_VERSION_PATCH_Mantle_extobjc 1
+
+// PureLayout
+#define COCOAPODS_POD_AVAILABLE_PureLayout
+#define COCOAPODS_VERSION_MAJOR_PureLayout 2
+#define COCOAPODS_VERSION_MINOR_PureLayout 0
+#define COCOAPODS_VERSION_PATCH_PureLayout 2
 
 // syncano-ios
 #define COCOAPODS_POD_AVAILABLE_syncano_ios
