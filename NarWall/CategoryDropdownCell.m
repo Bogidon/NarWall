@@ -20,7 +20,6 @@
 @implementation CategoryDropdownCell
 
 -(void)willMoveToSuperview:(UIView *)newSuperview {
-    //[self spinWithOptions:UIViewAnimationOptionCurveEaseInOut];
 }
 
 - (void) spinWithOptions: (UIViewAnimationOptions) options {
