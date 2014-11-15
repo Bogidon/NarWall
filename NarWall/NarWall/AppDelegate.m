@@ -20,8 +20,7 @@
     [Parse setApplicationId:@"Ndv4RrfwMNIt6YB09WnvqrzeyvYjb2jKMuvMmXwy"
                   clientKey:@"yKJpjIKCKG4eKeveAYwXaBMLcZayVwzkd0nN5ba7"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    PFUser *user = [PFUser currentUser];
-    if(!user){
+    if(![PFUser currentUser]){
         //No user is logged in, and we need to present the login view controller modally
     }
     return YES;
