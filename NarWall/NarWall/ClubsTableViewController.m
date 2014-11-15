@@ -8,7 +8,7 @@
 
 #import "ClubsTableViewController.h"
 #import "CreateClubTableViewController.h"
-
+#import "CategoryDropdownCell.h"
 @interface ClubsTableViewController () <UIActionSheetDelegate, CreateClubTableViewControllerDelegate>
 @end
 
@@ -18,7 +18,6 @@
     [super viewDidLoad];
     
     self.title = @"Clubs";
-    self.tabBarController.tabBarItem.title = @"Clubs";
     
     //Configure settings button
     self.settingsBarButtonItem.title = @"\u2699";
@@ -28,6 +27,25 @@
     
 }
 
+#pragma mark - Table View Layout
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44.0f;
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CategoryDropdownCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"CategoryDropdownCell"];
+    
+    return cell;
+}
+
+#pragma mark - Settings Pane
 - (IBAction)toggleSettingsPane:(UIBarButtonItem *)sender {
     UIActionSheet *settingsActionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Add", @"Categories", @"Sign Out", nil];
     [settingsActionSheet showFromBarButtonItem:self.settingsBarButtonItem animated:YES];
@@ -61,6 +79,7 @@
     }
 }
 
+# pragma mark - Other Delegates
 - (void)createClubTableViewControllerDidCancel:(UITableViewController *)createClubController {
     [self dismissViewControllerAnimated:YES completion:nil];
 }

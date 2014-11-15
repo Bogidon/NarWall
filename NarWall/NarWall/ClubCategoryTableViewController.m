@@ -21,10 +21,10 @@
     [super viewDidLoad];
     
     categoryTypes = [NSArray arrayWithObjects:
-                     @"fashion",
-                     @"outdoors",
-                     @"social",
-                     @"tech",
+                     @"Fashion",
+                     @"Outdoors",
+                     @"Social",
+                     @"Tech",
                      nil];
 }
 
@@ -44,7 +44,7 @@
     NSString *categoryType = categoryTypes[indexPath.row];
     
     CategoryCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"CategoryCell"];
-    [cell.iconImageView setImage:[UIImage imageNamed:categoryType]];
+    [cell.iconImageView setImage:[UIImage imageNamed:categoryType.lowercaseString]];
     cell.titleLabel.text = categoryType;
     cell.separatorInset = UIEdgeInsetsMake(0, 45, 0, 0);
     
