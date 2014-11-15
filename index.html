@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>NarWall</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <script src="js/respond.js"></script>
+
+  </head>
+
+  <body>
+    
+  	<header class="header">
+        <div class="text-vertical-center">
+            <h1>NarWall</h1>
+            <h3>The Social Bulletin</h3>
+            <br>
+            <a href="#container" class="btn btn-dark btn-lg">Find Out More</a>
+        </div>
+    </header>
+
+	<div id="container" class="container">
+	  <div class="col-sm-10 col-sm-offset-1">
+	    <div class="page-header text-center">
+	      <h1>Made by Students for Students</h1>
+	    </div>
+	    
+	    <p class="lead text-center">
+	      NarWall is the answer to keeping up to date with events, news, and clubs on campus. 
+	    </p>
+	    <p class="text-center">
+	
+	    </p>
+	  </div>
+	</div>
+
+	    
+	<div class="divider" id="section2"></div>
+	  
+	<section class="bg-1">
+	  <div class="col-sm-6 col-sm-offset-3 text-center"><h2 style="padding:20px;background-color:rgba(5,5,5,.8)">Never be stuck in your dorm room again</h2></div>
+	</section>
+	  
+	<div class="divider"></div>
+	   
+	<div class="container" id="section3">
+	  	<div class="col-sm-8 col-sm-offset-2 text-center">
+	      <h1>NarWall Features</h1>
+	  	</div>
+	</div>
+
+	<div class="container" id="section4">
+		<div class="row">
+			<div class="col-md-4 text-center">
+				<h3>Complete Club Listings</h3>
+	      	        <p>Looking to join or find out more about a club? Look no further. NarWall has every club on campus organized by category and up to date. </p> 
+	      	</div>
+	    	<div class="col-md-4 text-center">
+				<h3>Events and News</h3>
+	      	        <p>New York City is a place for busy people. NarWall informs you on anything that's happening nearby. Never miss anything from a rooftop party to a hackathon. </p> 
+	      	</div>
+	      	<div class="col-md-4 text-center">
+				<h3>Favorites</h3>
+	      	        <p>Record and track your favorite clubs. Sort NarWall accordingly to your tastes and preferences. </p> 
+	      	
+	      	</div>
+	    </div>
+	</div>
+
+	<br>
+	<br>
+
+
+	<div class="divider"></div>
+	  
+	<section class="bg-3" id="section5">
+	  <div class="col-sm-6 col-sm-offset-3 text-center"><h2 style="padding:20px;background-color:rgba(5,5,5,.8)"><a href="#" style="color: #FFF"> Get the App Now</a> <i class="fa fa-cloud-download"></i></h2>
+	  </div>
+	</section>
+
+	<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>Built by the New School Crew</strong>
+                    </h4>
+                    <p>Design and Hack<br>Hackathon</p>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook fa-fw fa-2x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter fa-fw fa-2x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-envelope fa-fw fa-2x"></i></a>
+                        </li>
+                    </ul>
+
+                  
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script>
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
+
+
+  </body>
+</html>
