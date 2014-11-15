@@ -9,7 +9,10 @@
 #import "ClubsTableViewController.h"
 #import "CreateClubTableViewController.h"
 #import "CategoryDropdownCell.h"
-@interface ClubsTableViewController () <UIActionSheetDelegate, CreateClubTableViewControllerDelegate>
+@interface ClubsTableViewController () <UIActionSheetDelegate, CreateClubTableViewControllerDelegate>{
+    NSArray *clubs;
+}
+
 @end
 
 @implementation ClubsTableViewController
@@ -18,13 +21,25 @@
     [super viewDidLoad];
     
     self.title = @"Clubs";
+    clubs = [NSArray array];
+    
+    //Get club data
+    PFQuery *clubsQuery = [PFQuery queryWithClassName:@"Clubs"];
+    [clubsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
+        if (!error) {
+            clubs = objects;
+            [self.tableView reloadData];
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
+
     
     //Configure settings button
     self.settingsBarButtonItem.title = @"\u2699";
     UIFont *settingsFont = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:24.0];
     NSDictionary *settingsAttributeDict = [[NSDictionary alloc] initWithObjectsAndKeys:settingsFont, NSFontAttributeName, nil];
     [self.settingsBarButtonItem setTitleTextAttributes:settingsAttributeDict forState:UIControlStateNormal];
-    
 }
 
 #pragma mark - Table View Layout

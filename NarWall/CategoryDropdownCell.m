@@ -7,18 +7,55 @@
 //
 
 #import "CategoryDropdownCell.h"
+#import "PureLayout.h"
+
+@import QuartzCore;
+
+@interface CategoryDropdownCell () {
+    BOOL animating;
+}
+
+@end
 
 @implementation CategoryDropdownCell
 
 -(void)willMoveToSuperview:(UIView *)newSuperview {
-    self.disclosureButton.titleLabel.text = @"";
+    self.disclosureView.transform = CGAffineTransformMakeRotation(M_PI_2 * 3);
     
-    UITableViewCell *disclosure = [[UITableViewCell alloc] init];
-    [self.disclosureButton addSubview:disclosure];
-    disclosure.frame = self.disclosureButton.bounds;
-    disclosure.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    disclosure.userInteractionEnabled = NO;
-    disclosure.transform = CGAffineTransformMakeRotation(M_PI_2);
+    [self spinWithOptions:UIViewAnimationOptionCurveEaseInOut];
+}
+
+- (void) spinWithOptions: (UIViewAnimationOptions) options {
+    // this spin completes 360 degrees every 2 seconds
+    [UIView animateWithDuration: 2.5f
+                          delay: 0.0f
+                        options: options
+                     animations: ^{
+                         self.disclosureView.transform = CGAffineTransformRotate(self.disclosureView.transform, M_PI);
+                     }
+                     completion: ^(BOOL finished) {
+                         if (finished) {
+                             if (animating) {
+                                 // if flag still set, keep spinning with constant speed
+                                 [self spinWithOptions: UIViewAnimationOptionCurveLinear];
+                             } else if (options != UIViewAnimationOptionCurveEaseOut) {
+                                 // one last spin, with deceleration
+                                 [self spinWithOptions: UIViewAnimationOptionCurveEaseOut];
+                             }
+                         }
+                     }];
+}
+
+- (void) startSpin {
+    if (!animating) {
+        animating = YES;
+        [self spinWithOptions: UIViewAnimationOptionCurveEaseIn];
+    }
+}
+
+- (void) stopSpin {
+    // set the flag to stop spinning after one last 90 degree increment
+    animating = NO;
 }
 
 @end
