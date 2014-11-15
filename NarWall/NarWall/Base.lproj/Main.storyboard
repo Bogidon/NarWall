@@ -213,8 +213,7 @@
                                                             <exclude reference="TOy-gT-pku"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                                        <rect key="frame" x="8" y="12" width="66.5" height="19.5"/>
+                                                    <variation key="widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="TOy-gT-pku"/>
                                                         </mask>
@@ -225,9 +224,6 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                                        <rect key="frame" x="84.5" y="11" width="274" height="20.5"/>
-                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>

@@ -7,14 +7,18 @@
 //
 
 #import "ClubsTableViewController.h"
+#import "CreateClubTableViewController.h"
 
-@interface ClubsTableViewController () <UIActionSheetDelegate>
+@interface ClubsTableViewController () <UIActionSheetDelegate, CreateClubTableViewControllerDelegate>
 @end
 
 @implementation ClubsTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"Clubs";
+    self.tabBarController.tabBarItem.title = @"Clubs";
     
     //Configure settings button
     self.settingsBarButtonItem.title = @"\u2699";
@@ -33,7 +37,13 @@
     switch (buttonIndex) {
         case 0 :{
             // Add club
-            UIViewController *createClubNavigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"CreateClubNavigationController"];
+            UINavigationController *createClubNavigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"CreateClubNavigationController"];
+            
+            if ([createClubNavigationController.topViewController isKindOfClass:[CreateClubTableViewController class]]) {
+                CreateClubTableViewController *createClubViewController = (CreateClubTableViewController*)createClubNavigationController.topViewController;
+                createClubViewController.delegate = self;
+            }
+            
             [self presentViewController:createClubNavigationController animated:YES completion:nil];
             break;
         }
@@ -49,6 +59,14 @@
         default:
             break;
     }
+}
+
+- (void)createClubTableViewControllerDidCancel:(UITableViewController *)createClubController {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)createClubTableViewController:(UITableViewController *)createClubController didSaveWithPFObject:(PFObject *)pfObject {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
