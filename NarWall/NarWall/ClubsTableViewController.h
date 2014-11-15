@@ -6,11 +6,9 @@
 //  Copyright (c) 2014 New School Crew. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface ClubsTableViewController : UITableViewController
-
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *settingsBarButtonItem;
 - (IBAction)toggleSettingsPane:(UIBarButtonItem *)sender;
-
 @end
