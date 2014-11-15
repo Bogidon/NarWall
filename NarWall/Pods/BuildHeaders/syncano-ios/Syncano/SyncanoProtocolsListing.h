@@ -1,1 +1,0 @@
-../../../syncano-ios/Syncano/Protocols/SyncanoProtocolsListing.h

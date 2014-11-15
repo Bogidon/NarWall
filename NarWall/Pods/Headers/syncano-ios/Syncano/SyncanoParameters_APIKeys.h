@@ -1,1 +1,0 @@
-../../../syncano-ios/Syncano/Parameters/APIKeys/SyncanoParameters_APIKeys.h

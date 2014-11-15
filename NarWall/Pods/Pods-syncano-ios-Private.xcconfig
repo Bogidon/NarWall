@@ -1,5 +1,0 @@
-#include "Pods-syncano-ios.xcconfig"
-GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/syncano-ios" "${PODS_ROOT}/BuildHeaders/syncano-ios/Syncano" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/AFNetworking" "${PODS_ROOT}/Headers/CocoaAsyncSocket" "${PODS_ROOT}/Headers/Mantle" "${PODS_ROOT}/Headers/syncano-ios" "${PODS_ROOT}/Headers/syncano-ios/Syncano"
-OTHER_LDFLAGS = -ObjC
-PODS_ROOT = ${SRCROOT}
