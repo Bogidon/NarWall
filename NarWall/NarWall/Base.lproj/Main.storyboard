@@ -1540,7 +1540,7 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Bogdan Vitoc, Michael Hulet, Ka Mok, Logan Wu" translatesAutoresizingMaskIntoConstraints="NO" id="pPT-4u-YNM">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Bogdan Vitoc, Michael Hulet, Ka Mok, Logan Wu" translatesAutoresizingMaskIntoConstraints="NO" id="pPT-4u-YNM">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Book" family="ITC Franklin Gothic Std" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1576,15 +1576,18 @@
                                             <action selector="emailContact:" destination="Zze-mu-5n5" eventType="touchUpInside" id="Xht-rN-La3"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Kg-9O-oeQ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Kg-9O-oeQ">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="611" id="Uni-66-FlX"/>
-                                            <constraint firstAttribute="width" secondItem="8Kg-9O-oeQ" secondAttribute="height" multiplier="311:87" id="tHT-HU-asE"/>
+                                            <constraint firstAttribute="width" constant="248" id="iJv-xt-BbV">
+                                                <variation key="widthClass=compact" constant="80"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" secondItem="8Kg-9O-oeQ" secondAttribute="height" multiplier="169:87" id="tHT-HU-asE"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="18"/>
-                                        <inset key="contentEdgeInsets" minX="20" minY="3" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Bogdan Vitoc" backgroundImage="Mail Button">
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Join" backgroundImage="Join Button">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="default">
@@ -1593,8 +1596,7 @@
                                                 <exclude reference="tHT-HU-asE"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="76" y="391" width="248" height="69.5"/>
+                                        <variation key="widthClass=compact">
                                             <mask key="constraints">
                                                 <exclude reference="Uni-66-FlX"/>
                                                 <include reference="tHT-HU-asE"/>
@@ -1623,6 +1625,7 @@
                                     <constraint firstItem="dML-ir-ZcH" firstAttribute="bottom" secondItem="KZ5-lz-gMl" secondAttribute="top" id="7zT-mf-B9t">
                                         <variation key="widthClass=compact" constant="0.0"/>
                                     </constraint>
+                                    <constraint firstItem="8Kg-9O-oeQ" firstAttribute="leading" secondItem="JLv-Sx-Udk" secondAttribute="leading" id="8be-VH-JJ8"/>
                                     <constraint firstAttribute="trailing" secondItem="KZ5-lz-gMl" secondAttribute="trailing" constant="80" id="A4d-8b-cvF">
                                         <variation key="widthClass=compact" constant="16"/>
                                     </constraint>
@@ -1667,6 +1670,12 @@
                                         <variation key="widthClass=compact" constant="0.0"/>
                                     </constraint>
                                     <constraint firstAttribute="trailing" secondItem="6O9-RY-QXa" secondAttribute="trailing" constant="8" id="Spx-pb-Ar5"/>
+                                    <constraint firstItem="8Kg-9O-oeQ" firstAttribute="top" secondItem="JLv-Sx-Udk" secondAttribute="bottom" constant="-0.5" id="T2h-rN-Kai">
+                                        <variation key="widthClass=compact" constant="0.0"/>
+                                    </constraint>
+                                    <constraint firstItem="pPT-4u-YNM" firstAttribute="top" secondItem="8Kg-9O-oeQ" secondAttribute="bottom" constant="-33.5" id="TFX-7h-0J7">
+                                        <variation key="widthClass=compact" constant="8"/>
+                                    </constraint>
                                     <constraint firstItem="oh5-bC-99L" firstAttribute="baseline" secondItem="rGO-BG-BHC" secondAttribute="baseline" id="TMT-G7-n39"/>
                                     <constraint firstItem="1hU-0Z-2Kw" firstAttribute="top" secondItem="50y-pd-DPD" secondAttribute="bottom" constant="8" id="VfY-OS-iXK"/>
                                     <constraint firstItem="50y-pd-DPD" firstAttribute="leading" secondItem="vMp-9h-1Li" secondAttribute="leadingMargin" id="Yv2-L7-jyX"/>
@@ -1710,6 +1719,7 @@
                                     <constraint firstItem="50y-pd-DPD" firstAttribute="top" secondItem="vMp-9h-1Li" secondAttribute="top" constant="8" id="s6M-lt-gwm">
                                         <variation key="widthClass=compact" constant="18"/>
                                     </constraint>
+                                    <constraint firstItem="8Kg-9O-oeQ" firstAttribute="trailing" secondItem="JLv-Sx-Udk" secondAttribute="trailing" id="sRB-b7-ecc"/>
                                     <constraint firstItem="rGO-BG-BHC" firstAttribute="top" secondItem="1hU-0Z-2Kw" secondAttribute="bottom" constant="37.5" id="sba-Fh-tnG"/>
                                     <constraint firstAttribute="trailing" secondItem="6O9-RY-QXa" secondAttribute="trailing" id="uKg-QR-zgb">
                                         <variation key="widthClass=compact" constant="8"/>
@@ -1724,6 +1734,7 @@
                                         <variation key="widthClass=compact" constant="0.0"/>
                                     </constraint>
                                     <constraint firstItem="96t-DQ-YpX" firstAttribute="leading" secondItem="vMp-9h-1Li" secondAttribute="leading" constant="8" id="xK5-B3-VB3"/>
+                                    <constraint firstItem="8Kg-9O-oeQ" firstAttribute="centerX" secondItem="JLv-Sx-Udk" secondAttribute="centerX" id="xf6-fj-OOd"/>
                                     <constraint firstItem="jMv-P8-odV" firstAttribute="leading" secondItem="96t-DQ-YpX" secondAttribute="trailing" constant="-29" id="y70-HY-c7L">
                                         <variation key="widthClass=compact" constant="8"/>
                                     </constraint>
@@ -1787,6 +1798,7 @@
                                         <exclude reference="unB-K6-onP"/>
                                         <exclude reference="Fxp-Ns-CcA"/>
                                         <exclude reference="GIV-gY-SAB"/>
+                                        <exclude reference="TFX-7h-0J7"/>
                                         <exclude reference="eMI-fL-tnI"/>
                                         <exclude reference="eiA-2T-NYx"/>
                                         <exclude reference="fct-e5-Pon"/>
@@ -1863,8 +1875,9 @@
                                         <include reference="pTY-OH-umV"/>
                                         <include reference="uKg-QR-zgb"/>
                                         <exclude reference="unB-K6-onP"/>
-                                        <include reference="Fxp-Ns-CcA"/>
+                                        <exclude reference="Fxp-Ns-CcA"/>
                                         <include reference="GIV-gY-SAB"/>
+                                        <include reference="TFX-7h-0J7"/>
                                         <exclude reference="eMI-fL-tnI"/>
                                         <include reference="eiA-2T-NYx"/>
                                         <exclude reference="fct-e5-Pon"/>
@@ -1974,6 +1987,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Join Button" width="169" height="87"/>
         <image name="Mail Button" width="311" height="87"/>
         <image name="collapse" width="22" height="22"/>
         <image name="detailDisclosure" width="12" height="12"/>
