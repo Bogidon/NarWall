@@ -7,7 +7,7 @@
 //
 
 #import "NSCProfileViewController.h"
-#import <Parse/Parse.h>
+@import Parse;
 @interface NSCProfileViewController ()
 @property (strong, nonatomic) PFUser *current;
 @property (strong, nonatomic) NSMutableArray *info;
@@ -49,15 +49,6 @@
     }
     self.info = @[self.firstNameField.text, self.lastNameField.text, self.emailField.text].mutableCopy;
     [self hideBarButtons];
-    self.emailField.adjustsFontSizeToFitWidth = YES;
-    self.firstNameField.adjustsFontSizeToFitWidth = YES;
-    self.lastNameField.adjustsFontSizeToFitWidth = YES;
-    self.emailField.minimumFontSize = 15;
-    self.firstNameField.minimumFontSize = 35;
-    self.lastNameField.minimumFontSize = 35;
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange:) name:UITextFieldTextDidChangeNotification object:self.emailField];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange:) name:UITextFieldTextDidChangeNotification object:self.firstNameField];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange:) name:UITextFieldTextDidChangeNotification object:self.lastNameField];
 }
 -(IBAction)save:(UIBarButtonItem *)sender{
     if(![self.firstNameField.text isEqualToString:@"Your First Name"] && ![self.firstNameField.text isEqualToString:@""]){
@@ -143,23 +134,5 @@
             textField.text = @"email@example.com";
         }
     }
-}
-#pragma mark - UITextInputDelegate Protocol Methods
--(void)textDidChange:(id<UITextInput>)textInput{
-    //UITextField *field = (UITextField *)textInput[@"object"];
-    NSLog(self.emailField.adjustsFontSizeToFitWidth ? @"YES" : @"NO");
-    self.emailField.adjustsFontSizeToFitWidth = YES;
-    self.firstNameField.adjustsFontSizeToFitWidth = YES;
-    self.lastNameField.adjustsFontSizeToFitWidth = YES;
-}
-//These next methods must be implemented to conform to the UITextInputDelegate protocol
--(void)selectionDidChange:(id<UITextInput>)textInput{
-    return;
-}
--(void)selectionWillChange:(id<UITextInput>)textInput{
-    return;
-}
--(void)textWillChange:(id<UITextInput>)textInput{
-    return;
 }
 @end
