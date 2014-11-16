@@ -100,7 +100,7 @@
 }
 -(void)showBarButtons{
     if(!self.navigationItem.rightBarButtonItem){
-        UIBarButtonItem *save = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save)];
+        UIBarButtonItem *save = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save:)];
         UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelEditing)];
         cancel.title = @"Cancel";
         self.navigationItem.leftBarButtonItem = cancel;
