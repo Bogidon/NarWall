@@ -12,10 +12,11 @@
 #import "ClubCategory.h"
 #import "ClubCategoryManager.h"
 #import "ClubCell.h"
+#import "NSCClubDetailViewController.h"
 
 typedef void(^completionHandler)();
 
-@interface ClubsTableViewController () <UIActionSheetDelegate, CreateClubTableViewControllerDelegate>{
+@interface ClubsTableViewController () <CreateClubTableViewControllerDelegate>{
     NSMutableArray *categories;
     NSMutableArray *clubs;
     NSMutableArray *totalArray;
@@ -23,8 +24,6 @@ typedef void(^completionHandler)();
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property ClubCategoryManager *clubCategoryManager;
 -(void)refresh;
--(void)getClubData;
--(void)reloadTableViewData;
 @end
 
 @implementation ClubsTableViewController
@@ -39,36 +38,29 @@ typedef void(^completionHandler)();
     clubs = [NSMutableArray array];
     categories = [NSMutableArray array];
     
-    [self getTableDataCompletion:nil];
+    [self getTableData:nil];
     
-    //Configure settings button
-    self.settingsBarButtonItem.title = @"\u2699";
-    
-    UIFont *settingsFont = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:24.0];
-    NSDictionary *settingsAttributeDict = [[NSDictionary alloc] initWithObjectsAndKeys:settingsFont, NSFontAttributeName, nil];
-    
-    [self.settingsBarButtonItem setTitleTextAttributes:settingsAttributeDict forState:UIControlStateNormal];
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:self.refreshControl];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self getTableData:^(){
+        [self spinAllDisclosuresUp];
+    }];
+}
+
 -(void)refresh{
     [self.refreshControl beginRefreshing];
-    [self getTableDataCompletion:^(){
-        
-        for (int i = 0; i < self.clubCategoryManager.categories.count; i++) {
-            CategoryDropdownCell *cell = (CategoryDropdownCell*)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:i]];
-            if (cell.direction == NSCPointerDirectionUp) {
-                [cell spinWithOptions:UIViewAnimationOptionTransitionNone];
-            }
-        }
-        
+    [self getTableData:^(){
+        [self spinAllDisclosuresUp];
         [self.refreshControl endRefreshing];
     }];
 }
 
--(void)getTableDataCompletion:(completionHandler)handler {
+-(void)getTableData:(completionHandler)handler {
     self.clubCategoryManager = [[ClubCategoryManager alloc] init];
     PFQuery *clubsQuery = [PFQuery queryWithClassName:@"Clubs"];
     [clubsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
@@ -132,20 +124,29 @@ typedef void(^completionHandler)();
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    CategoryDropdownCell *cell = (CategoryDropdownCell *)[tableView cellForRowAtIndexPath:indexPath];
-    [cell spinWithOptions:UIViewAnimationOptionCurveEaseOut];
     
-    cell.clubCategory.isVisible = !cell.clubCategory.isVisible;
-    
-    NSMutableArray *indexPaths = [NSMutableArray array];
-    for (int i = 0; i < cell.clubCategory.clubs.count ; i++) {
-        [indexPaths addObject: [NSIndexPath indexPathForRow:i+1 inSection:indexPath.section]];
-    }
-    
-    if (cell.clubCategory.isVisible) {
-        [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
+    if (indexPath.row == 0) {
+        CategoryDropdownCell *cell = (CategoryDropdownCell *)[tableView cellForRowAtIndexPath:indexPath];
+        [cell spinWithOptions:UIViewAnimationOptionCurveEaseOut];
+        
+        cell.clubCategory.isVisible = !cell.clubCategory.isVisible;
+        
+        NSMutableArray *indexPaths = [NSMutableArray array];
+        for (int i = 0; i < cell.clubCategory.clubs.count ; i++) {
+            [indexPaths addObject: [NSIndexPath indexPathForRow:i+1 inSection:indexPath.section]];
+        }
+        
+        if (cell.clubCategory.isVisible) {
+            [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
+        } else {
+            [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
+        }
     } else {
-        [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
+        ClubCell *cell = (ClubCell*)[tableView cellForRowAtIndexPath:indexPath];
+        NSCClubDetailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"clubDetail"];
+        [self.navigationController pushViewController:detailViewController animated:YES];
+        [detailViewController view];
+        [detailViewController setPFObject:[self.clubCategoryManager clubWithIndex:indexPath.row - 1 inCategoryWithIndex:indexPath.section]];
     }
 }
 
@@ -175,9 +176,22 @@ typedef void(^completionHandler)();
 }
 
 #pragma mark - Settings Pane
-- (IBAction)toggleSettingsPane:(UIBarButtonItem *)sender {
-    UIActionSheet *settingsActionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Add", @"Categories", @"Sign Out", nil];
-    [settingsActionSheet showFromBarButtonItem:self.settingsBarButtonItem animated:YES];
+- (IBAction)collapseTableView:(id)sender {
+    [self spinAllDisclosuresUp];
+    for (int categoryCount = 0; categoryCount < self.clubCategoryManager.categories.count; categoryCount++) {
+        ClubCategory *category = self.clubCategoryManager.categories[categoryCount];
+        
+        if (category.isVisible) {
+            category.isVisible = NO;
+            
+            NSMutableArray *indexPaths = [NSMutableArray array];
+            for (int clubCount = 0; clubCount < category.clubs.count; clubCount++) {
+                NSIndexPath *indexPath = [NSIndexPath indexPathForRow:clubCount + 1 inSection:categoryCount];
+                [indexPaths addObject:indexPath];
+            }
+            [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
+        }
+    }
 }
 
 - (IBAction)newClub:(UIBarButtonItem *)sender {
@@ -212,6 +226,15 @@ typedef void(^completionHandler)();
         }
         default:
             break;
+    }
+}
+
+- (void)spinAllDisclosuresUp {
+    for (int i = 0; i < self.clubCategoryManager.categories.count; i++) {
+        CategoryDropdownCell *cell = (CategoryDropdownCell*)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:i]];
+        if (cell.direction == NSCPointerDirectionUp) {
+            [cell spinWithOptions:UIViewAnimationOptionTransitionNone];
+        }
     }
 }
 

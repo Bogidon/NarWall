@@ -37,8 +37,11 @@
 		43D4BC341A183CD7004816DA /* ITCFranklinGothicStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 431AA6F11A1800BA00B52D02 /* ITCFranklinGothicStd-Book.otf */; };
 		43D4BC371A184FA3004816DA /* NSCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D4BC361A184FA2004816DA /* NSCTabBarController.m */; };
 		43D4BC3A1A185819004816DA /* NSCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D4BC391A185819004816DA /* NSCNavigationController.m */; };
+<<<<<<< HEAD
 		4C41AB531A187373005EEBF6 /* NSCProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C41AB521A187373005EEBF6 /* NSCProfileViewController.m */; };
+=======
 		43D4BC3D1A1883E1004816DA /* NSCClubDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D4BC3C1A1883E1004816DA /* NSCClubDetailViewController.m */; };
+>>>>>>> Data loading to detail view
 		4C60C3731A171B1700960F7F /* ITCFranklinGothicStd-Hvy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60C3721A171B1600960F7F /* ITCFranklinGothicStd-Hvy.otf */; };
 		4C60C3751A171BAB00960F7F /* ITCFranklinGothicStd-Med.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60C3741A171BAB00960F7F /* ITCFranklinGothicStd-Med.otf */; };
 		4C60C37B1A17F95100960F7F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60C37A1A17F95100960F7F /* LoginViewController.m */; };
@@ -102,10 +105,13 @@
 		43D4BC361A184FA2004816DA /* NSCTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCTabBarController.m; sourceTree = "<group>"; };
 		43D4BC381A185819004816DA /* NSCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCNavigationController.h; sourceTree = "<group>"; };
 		43D4BC391A185819004816DA /* NSCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCNavigationController.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		4C41AB511A187373005EEBF6 /* NSCProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCProfileViewController.h; sourceTree = "<group>"; };
 		4C41AB521A187373005EEBF6 /* NSCProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCProfileViewController.m; sourceTree = "<group>"; };
+=======
 		43D4BC3B1A1883E1004816DA /* NSCClubDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCClubDetailViewController.h; sourceTree = "<group>"; };
 		43D4BC3C1A1883E1004816DA /* NSCClubDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCClubDetailViewController.m; sourceTree = "<group>"; };
+>>>>>>> Data loading to detail view
 		4C60C3721A171B1600960F7F /* ITCFranklinGothicStd-Hvy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ITCFranklinGothicStd-Hvy.otf"; sourceTree = "<group>"; };
 		4C60C3741A171BAB00960F7F /* ITCFranklinGothicStd-Med.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ITCFranklinGothicStd-Med.otf"; sourceTree = "<group>"; };
 		4C60C3791A17F95000960F7F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -170,10 +176,13 @@
 		432BA5381A171D6B00D8B173 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				4C41AB511A187373005EEBF6 /* NSCProfileViewController.h */,
 				4C41AB521A187373005EEBF6 /* NSCProfileViewController.m */,
+=======
 				43D4BC3B1A1883E1004816DA /* NSCClubDetailViewController.h */,
 				43D4BC3C1A1883E1004816DA /* NSCClubDetailViewController.m */,
+>>>>>>> Data loading to detail view
 				43D4BC381A185819004816DA /* NSCNavigationController.h */,
 				43D4BC391A185819004816DA /* NSCNavigationController.m */,
 				4C60C3791A17F95000960F7F /* LoginViewController.h */,

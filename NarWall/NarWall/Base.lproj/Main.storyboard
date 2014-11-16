@@ -78,6 +78,9 @@
                                         <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="32" y="294" width="350" height="30"/>
+                                        </variation>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Itc-qh-4Yd">
                                         <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -91,7 +94,8 @@
                                                 <exclude reference="KKs-cN-pPe"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact">
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="32" y="228" width="350" height="30"/>
                                             <mask key="constraints">
                                                 <include reference="KKs-cN-pPe"/>
                                             </mask>
@@ -102,12 +106,18 @@
                                         <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="24"/>
                                         <color key="textColor" red="0.32549019607843138" green="0.27843137254901962" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="32" y="200" width="350" height="28"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Uf-VV-okY">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                         <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="24"/>
                                         <color key="textColor" red="0.32549019607843138" green="0.27843137254901962" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="32" y="266" width="350" height="28"/>
+                                        </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abg-TD-9Ax">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -128,7 +138,8 @@
                                                 <exclude reference="U2X-fC-PGm"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact">
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="126" y="340" width="162" height="55"/>
                                             <mask key="constraints">
                                                 <include reference="R3X-dj-l1Z"/>
                                                 <include reference="U2X-fC-PGm"/>
@@ -998,7 +1009,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="45" y="11" width="93" height="26"/>
+                                                        <rect key="frame" x="45" y="12" width="84.5" height="23.5"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -1140,7 +1151,8 @@
                                                     <exclude reference="Pew-Tz-X9s"/>
                                                 </mask>
                                             </variation>
-                                            <variation key="widthClass=compact">
+                                            <variation key="widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="8" y="30" width="384" height="41"/>
                                                 <mask key="constraints">
                                                     <include reference="Pew-Tz-X9s"/>
                                                 </mask>
@@ -1151,6 +1163,9 @@
                                             <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="8" y="8" width="384" height="21"/>
+                                            </variation>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" red="0.99607843137254903" green="0.8784313725490196" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1206,9 +1221,9 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="1"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="gV8-A3-3AL">
-                        <barButtonItem key="leftBarButtonItem" title="Settings" style="done" id="yCf-Yc-y1X">
+                        <barButtonItem key="leftBarButtonItem" image="collapse" style="done" id="yCf-Yc-y1X">
                             <connections>
-                                <action selector="toggleSettingsPane:" destination="oYK-sG-8ap" id="dd2-ks-bw4"/>
+                                <action selector="collapseTableView:" destination="oYK-sG-8ap" id="lJO-21-tEn"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="jP3-H6-Diy">
@@ -1219,17 +1234,16 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="jP3-H6-Diy" id="4ck-QG-fon"/>
-                        <outlet property="settingsBarButtonItem" destination="yCf-Yc-y1X" id="bA1-ym-2Ch"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="toF-Ik-Sl1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1705.5" y="312"/>
         </scene>
-        <!--View Controller-->
+        <!--Club Detail View Controller-->
         <scene sceneID="Hhb-g9-Uzw">
             <objects>
-                <viewController id="Zze-mu-5n5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="clubDetail" id="Zze-mu-5n5" customClass="NSCClubDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WzF-Gb-UUa"/>
                         <viewControllerLayoutGuide type="bottom" id="LsX-df-yKN"/>
@@ -1284,9 +1298,6 @@
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Book" family="ITC Franklin Gothic Std" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="8" y="50" width="384" height="183.5"/>
-                                        </variation>
                                     </textView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZ5-lz-gMl" userLabel="Separator">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -1301,8 +1312,7 @@
                                                 <exclude reference="2nz-pa-ki4"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="16" y="238" width="368" height="1"/>
+                                        <variation key="widthClass=compact">
                                             <mask key="constraints">
                                                 <include reference="2nz-pa-ki4"/>
                                             </mask>
@@ -1313,9 +1323,6 @@
                                         <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Book" family="ITC Franklin Gothic Std" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="134" y="255" width="258" height="20"/>
-                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meeting times:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGO-BG-BHC">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -1332,8 +1339,7 @@
                                                 <exclude reference="nVG-et-8xl"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="16" y="255" width="110" height="20"/>
+                                        <variation key="widthClass=compact">
                                             <mask key="constraints">
                                                 <include reference="nVG-et-8xl"/>
                                             </mask>
@@ -1344,9 +1350,6 @@
                                         <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Book" family="ITC Franklin Gothic Std" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="91" y="283" width="301" height="20"/>
-                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96t-DQ-YpX">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -1361,8 +1364,7 @@
                                                 <exclude reference="Spr-rL-OyZ"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="16" y="283" width="67" height="20"/>
+                                        <variation key="widthClass=compact">
                                             <mask key="constraints">
                                                 <include reference="Spr-rL-OyZ"/>
                                             </mask>
@@ -1415,6 +1417,7 @@
                                     <constraint firstAttribute="trailing" secondItem="oh5-bC-99L" secondAttribute="trailing" constant="8" id="b1V-vc-5eP"/>
                                     <constraint firstAttribute="trailing" secondItem="6O9-RY-QXa" secondAttribute="trailing" constant="8" id="egf-Fi-I1L"/>
                                     <constraint firstAttribute="centerX" secondItem="1hU-0Z-2Kw" secondAttribute="centerX" id="fD5-bO-NoI"/>
+                                    <constraint firstAttribute="bottom" secondItem="96t-DQ-YpX" secondAttribute="bottom" constant="239" id="gNF-9T-a24"/>
                                     <constraint firstItem="96t-DQ-YpX" firstAttribute="baseline" secondItem="jMv-P8-odV" secondAttribute="baseline" id="l7i-Jb-Nab"/>
                                     <constraint firstItem="rGO-BG-BHC" firstAttribute="top" secondItem="KZ5-lz-gMl" secondAttribute="bottom" constant="8" id="oVh-Z4-YvE">
                                         <variation key="widthClass=compact" constant="16"/>
@@ -1435,6 +1438,7 @@
                                     <constraint firstItem="50y-pd-DPD" firstAttribute="top" secondItem="vMp-9h-1Li" secondAttribute="top" constant="8" id="s6M-lt-gwm">
                                         <variation key="widthClass=compact" constant="18"/>
                                     </constraint>
+                                    <constraint firstItem="rGO-BG-BHC" firstAttribute="top" secondItem="1hU-0Z-2Kw" secondAttribute="bottom" constant="37.5" id="sba-Fh-tnG"/>
                                     <constraint firstAttribute="trailing" secondItem="6O9-RY-QXa" secondAttribute="trailing" id="uKg-QR-zgb">
                                         <variation key="widthClass=compact" constant="8"/>
                                     </constraint>
@@ -1467,34 +1471,36 @@
                                         <exclude reference="p8f-3a-VMg"/>
                                         <exclude reference="qUG-w5-gI5"/>
                                         <exclude reference="s6M-lt-gwm"/>
-                                        <exclude reference="1Td-Ze-QHf"/>
-                                        <exclude reference="AZd-EQ-1xZ"/>
-                                        <exclude reference="Pn8-ib-jFL"/>
-                                        <exclude reference="l7i-Jb-Nab"/>
-                                        <exclude reference="prb-dE-jVf"/>
-                                        <exclude reference="xK5-B3-VB3"/>
-                                        <exclude reference="3o4-3V-Etr"/>
-                                        <exclude reference="Lbp-Nb-ISq"/>
-                                        <exclude reference="y70-HY-c7L"/>
-                                        <exclude reference="3oB-2p-bXA"/>
-                                        <exclude reference="TMT-G7-n39"/>
-                                        <exclude reference="b1V-vc-5eP"/>
-                                        <exclude reference="DmA-Sw-ErG"/>
-                                        <exclude reference="Qh9-fg-POG"/>
-                                        <exclude reference="oVh-Z4-YvE"/>
                                         <exclude reference="7m6-8Q-G8J"/>
                                         <exclude reference="CXn-VD-l3U"/>
                                         <exclude reference="Mex-kN-pBq"/>
                                         <exclude reference="VfY-OS-iXK"/>
                                         <exclude reference="fD5-bO-NoI"/>
+                                        <exclude reference="0gh-FH-7Ke"/>
+                                        <exclude reference="A4d-8b-cvF"/>
+                                        <exclude reference="Km0-I7-MtE"/>
+                                        <exclude reference="DmA-Sw-ErG"/>
+                                        <exclude reference="Qh9-fg-POG"/>
+                                        <exclude reference="oVh-Z4-YvE"/>
+                                        <exclude reference="sba-Fh-tnG"/>
+                                        <exclude reference="1Td-Ze-QHf"/>
+                                        <exclude reference="AZd-EQ-1xZ"/>
+                                        <exclude reference="Pn8-ib-jFL"/>
+                                        <exclude reference="gNF-9T-a24"/>
+                                        <exclude reference="l7i-Jb-Nab"/>
+                                        <exclude reference="prb-dE-jVf"/>
+                                        <exclude reference="xK5-B3-VB3"/>
+                                        <exclude reference="3oB-2p-bXA"/>
+                                        <exclude reference="TMT-G7-n39"/>
+                                        <exclude reference="b1V-vc-5eP"/>
+                                        <exclude reference="3o4-3V-Etr"/>
+                                        <exclude reference="Lbp-Nb-ISq"/>
+                                        <exclude reference="y70-HY-c7L"/>
                                         <exclude reference="66q-Xc-U84"/>
                                         <exclude reference="Kxi-EI-pyh"/>
                                         <exclude reference="pTY-OH-umV"/>
                                         <exclude reference="uKg-QR-zgb"/>
                                         <exclude reference="unB-K6-onP"/>
-                                        <exclude reference="0gh-FH-7Ke"/>
-                                        <exclude reference="A4d-8b-cvF"/>
-                                        <exclude reference="Km0-I7-MtE"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -1518,26 +1524,31 @@
                                         <exclude reference="p8f-3a-VMg"/>
                                         <exclude reference="qUG-w5-gI5"/>
                                         <include reference="s6M-lt-gwm"/>
-                                        <include reference="1Td-Ze-QHf"/>
-                                        <include reference="AZd-EQ-1xZ"/>
-                                        <exclude reference="Pn8-ib-jFL"/>
-                                        <include reference="l7i-Jb-Nab"/>
-                                        <include reference="prb-dE-jVf"/>
-                                        <exclude reference="xK5-B3-VB3"/>
-                                        <include reference="3o4-3V-Etr"/>
-                                        <include reference="Lbp-Nb-ISq"/>
-                                        <exclude reference="y70-HY-c7L"/>
-                                        <include reference="3oB-2p-bXA"/>
-                                        <include reference="TMT-G7-n39"/>
-                                        <include reference="b1V-vc-5eP"/>
-                                        <include reference="DmA-Sw-ErG"/>
-                                        <include reference="Qh9-fg-POG"/>
-                                        <exclude reference="oVh-Z4-YvE"/>
                                         <include reference="7m6-8Q-G8J"/>
                                         <include reference="CXn-VD-l3U"/>
                                         <exclude reference="Mex-kN-pBq"/>
                                         <include reference="VfY-OS-iXK"/>
                                         <include reference="fD5-bO-NoI"/>
+                                        <include reference="0gh-FH-7Ke"/>
+                                        <include reference="A4d-8b-cvF"/>
+                                        <exclude reference="Km0-I7-MtE"/>
+                                        <include reference="DmA-Sw-ErG"/>
+                                        <include reference="Qh9-fg-POG"/>
+                                        <exclude reference="oVh-Z4-YvE"/>
+                                        <include reference="sba-Fh-tnG"/>
+                                        <exclude reference="1Td-Ze-QHf"/>
+                                        <include reference="AZd-EQ-1xZ"/>
+                                        <exclude reference="Pn8-ib-jFL"/>
+                                        <include reference="gNF-9T-a24"/>
+                                        <include reference="l7i-Jb-Nab"/>
+                                        <include reference="prb-dE-jVf"/>
+                                        <exclude reference="xK5-B3-VB3"/>
+                                        <include reference="3oB-2p-bXA"/>
+                                        <include reference="TMT-G7-n39"/>
+                                        <include reference="b1V-vc-5eP"/>
+                                        <include reference="3o4-3V-Etr"/>
+                                        <include reference="Lbp-Nb-ISq"/>
+                                        <exclude reference="y70-HY-c7L"/>
                                         <include reference="66q-Xc-U84"/>
                                         <include reference="Kxi-EI-pyh"/>
                                         <exclude reference="Spx-pb-Ar5"/>
@@ -1545,9 +1556,6 @@
                                         <include reference="pTY-OH-umV"/>
                                         <include reference="uKg-QR-zgb"/>
                                         <exclude reference="unB-K6-onP"/>
-                                        <include reference="0gh-FH-7Ke"/>
-                                        <include reference="A4d-8b-cvF"/>
-                                        <include reference="Km0-I7-MtE"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -1607,6 +1615,13 @@
                         </variation>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="1hU-0Z-2Kw" id="83f-n8-Mfb"/>
+                        <outlet property="locationLabel" destination="jMv-P8-odV" id="wTc-7i-Tt2"/>
+                        <outlet property="meetingLabel" destination="oh5-bC-99L" id="lJk-8Z-9Lj"/>
+                        <outlet property="nameLabel" destination="50y-pd-DPD" id="JNU-es-caJ"/>
+                        <outlet property="verifiedIconImageView" destination="6O9-RY-QXa" id="ujg-Mr-GST"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3l-pP-qY1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1633,6 +1648,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="collapse" width="22" height="22"/>
         <image name="detailDisclosure" width="12" height="12"/>
         <image name="login" width="111" height="55"/>
         <image name="login-header" width="313" height="72"/>
