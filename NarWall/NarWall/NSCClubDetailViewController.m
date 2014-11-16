@@ -22,6 +22,7 @@
     self.descriptionTextView.text = pfObject[@"description"];
     self.meetingLabel.text = pfObject[@"meetingTimes"];
     self.locationLabel.text = pfObject[@"location"];
+    [self.contactButton setTitle:pfObject[@"contactName"] forState:UIControlStateNormal];
     self.membersTextView.text = @"";
     
     if (!pfObject[@"members"]) {
@@ -57,6 +58,9 @@
     
     UIBarButtonItem *favoritesButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed: self.isFavorited ? @"Favorites-Pressed" : @"Favorites-Normal"] style:UIBarButtonItemStylePlain target:self action:@selector(addToFavorites:)];
     self.navigationItem.rightBarButtonItem = favoritesButton;
+}
+
+- (IBAction)emailContact:(UIButton *)sender {
 }
 
 - (void)viewDidLoad {
