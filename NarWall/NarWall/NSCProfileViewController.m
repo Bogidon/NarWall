@@ -67,6 +67,7 @@
     }];
     self.info = @[self.firstNameField.text, self.lastNameField.text, self.emailField.text].mutableCopy;
     [self dismissKeyboard];
+    [self hideBarButtons];
 }
 -(IBAction)signOut:(UIBarButtonItem *)sender{
     [PFUser logOut];
