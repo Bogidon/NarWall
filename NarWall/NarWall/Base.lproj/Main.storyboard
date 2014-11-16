@@ -67,8 +67,7 @@
                                                 <exclude reference="nLV-Vl-Lmo"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="32" y="80" width="350" height="642"/>
+                                        <variation key="widthClass=compact">
                                             <mask key="constraints">
                                                 <exclude reference="fAn-g1-fcq"/>
                                                 <exclude reference="g7O-FJ-Yzs"/>
@@ -81,7 +80,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="32" y="864" width="350" height="30"/>
+                                            <rect key="frame" x="32" y="294" width="350" height="30"/>
                                         </variation>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Itc-qh-4Yd">
@@ -97,7 +96,7 @@
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="32" y="798" width="350" height="30"/>
+                                            <rect key="frame" x="32" y="228" width="350" height="30"/>
                                             <mask key="constraints">
                                                 <include reference="KKs-cN-pPe"/>
                                             </mask>
@@ -109,7 +108,7 @@
                                         <color key="textColor" red="0.32549019607843138" green="0.27843137254901962" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="32" y="770" width="350" height="28"/>
+                                            <rect key="frame" x="32" y="200" width="350" height="28"/>
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Uf-VV-okY">
@@ -118,7 +117,7 @@
                                         <color key="textColor" red="0.32549019607843138" green="0.27843137254901962" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="32" y="836" width="350" height="28"/>
+                                            <rect key="frame" x="32" y="266" width="350" height="28"/>
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abg-TD-9Ax">
@@ -141,7 +140,7 @@
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="126" y="910" width="162" height="55"/>
+                                            <rect key="frame" x="126" y="340" width="162" height="55"/>
                                             <mask key="constraints">
                                                 <include reference="R3X-dj-l1Z"/>
                                                 <include reference="U2X-fC-PGm"/>
@@ -472,7 +471,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="pis-12-aME">
                             <connections>
-                                <action selector="save:" destination="ZYE-Bm-dcT" id="nZj-KG-fo0"/>
+                                <action selector="save:" destination="ZYE-Bm-dcT" id="QkC-8X-yOo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
