@@ -50,12 +50,14 @@
             [spinner stopAnimating];
             [spinner removeFromSuperview];
             self.loginButton.hidden = NO;
+            NSLog(@"Login failed");
         }
         else{
             [spinner stopAnimating];
             [spinner removeFromSuperview];
             self.loginButton.hidden = NO;
             [self.navigationController performSegueWithIdentifier:@"main" sender:self.navigationController];
+            NSLog(@"Login succeeded");
         }
     }];
 }

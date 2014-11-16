@@ -170,6 +170,8 @@
             
         case 2:
             //Sign Out
+            [PFUser logOut];
+            [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"login"] animated:YES completion:nil];
             break;
             
         default:
