@@ -16,7 +16,7 @@
     [self.navigationBar setTitleTextAttributes:
      [NSDictionary dictionaryWithObjectsAndKeys:
       [UIFont fontWithName:@"ITCFranklinGothicStd-Med" size:18.0],
-      NSFontAttributeName,  nil]];
+      NSFontAttributeName, [UIColor colorWithRed:253/255.0 green:65/255.0 blue:32/255.0 alpha:1.0], NSForegroundColorAttributeName, nil]];
     
     [self.navigationBar setTintColor:[UIColor colorWithRed:253/255.0 green:65/255.0 blue:32/255.0 alpha:1.0]];
 }

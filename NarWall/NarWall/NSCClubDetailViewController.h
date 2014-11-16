@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *meetingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 
+@property (weak, nonatomic) IBOutlet UITextView *membersTextView;
 @property (weak, nonatomic) IBOutlet UIImageView *verifiedIconImageView;
 - (void)setPFObject:(PFObject*)pfObject;
 

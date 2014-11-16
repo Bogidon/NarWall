@@ -1,13 +1,16 @@
 PODS:
+  - BVViewList (1.0.1)
   - MTTextViewController (0.1.0)
   - PureLayout (2.0.2)
 
 DEPENDENCIES:
+  - BVViewList (= 1.0.1)
   - MTTextViewController
   - PureLayout
 
 SPEC CHECKSUMS:
+  BVViewList: deca5f9f599fda11e365b297e1ec36f7092928eb
   MTTextViewController: 0d8f85c19c1064c96ff6bc0e99b6012cb91f8eac
   PureLayout: 03fe8d5ab68f5871038b3b7065d28ac880d5f2a0
 
-COCOAPODS: 0.35.0.rc2
+COCOAPODS: 0.34.4

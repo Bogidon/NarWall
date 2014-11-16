@@ -52,10 +52,10 @@
 }
 -(IBAction)save:(UIBarButtonItem *)sender{
     if(![self.firstNameField.text isEqualToString:@"Your First Name"] && ![self.firstNameField.text isEqualToString:@""]){
-        [self.current setObject:self.firstNameField.text forKey:@"firstName"];
+        self.current[@"firstName"] = self.firstNameField.text;
     }
     if(![self.lastNameField.text isEqualToString:@"Your Last Name"] && ![self.lastNameField.text isEqualToString:@""]){
-        [self.current setObject:self.lastNameField.text forKey:@"lastName"];
+        self.current[@"lastName"] = self.lastNameField.text;
     }
     if(![self.emailField.text isEqualToString:@"email@example.com"] && ![self.emailField.text isEqualToString:@""]){
         self.current.email = self.emailField.text;

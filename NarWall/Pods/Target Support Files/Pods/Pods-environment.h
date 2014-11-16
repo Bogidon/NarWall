@@ -6,6 +6,12 @@
 // project.
 
 
+// BVViewList
+#define COCOAPODS_POD_AVAILABLE_BVViewList
+#define COCOAPODS_VERSION_MAJOR_BVViewList 1
+#define COCOAPODS_VERSION_MINOR_BVViewList 0
+#define COCOAPODS_VERSION_PATCH_BVViewList 1
+
 // MTTextViewController
 #define COCOAPODS_POD_AVAILABLE_MTTextViewController
 #define COCOAPODS_VERSION_MAJOR_MTTextViewController 0
