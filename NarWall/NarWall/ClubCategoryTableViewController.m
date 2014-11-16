@@ -43,7 +43,7 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *categoryType = categoryTypes[indexPath.row];
-    NSString *imageName = [[categoryType stringByReplacingOccurrencesOfString:@" " withString:@""] lowercaseString];
+    //NSString *imageName = [[categoryType stringByReplacingOccurrencesOfString:@" " withString:@""] lowercaseString];
     
     CategoryCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"CategoryCell"];
     [cell.iconImageView setImage:[UIImage imageNamed:categoryType]];

@@ -7,7 +7,7 @@
 //
 
 @import UIKit;
-#import "Parse/Parse.h"
+@import Parse;
 
 @protocol CreateClubTableViewControllerDelegate <NSObject>
 

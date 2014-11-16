@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 New School Crew. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 @import Parse;
 
 @interface ClubCategory : NSObject

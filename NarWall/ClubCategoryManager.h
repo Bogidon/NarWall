@@ -6,8 +6,8 @@
 //
 //
 
-#import <Foundation/Foundation.h>
-#import <Parse/Parse.h>
+@import Foundation;
+@import Parse;
 
 @interface ClubCategoryManager : NSObject
 

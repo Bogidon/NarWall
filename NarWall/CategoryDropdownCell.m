@@ -8,9 +8,7 @@
 
 #import "CategoryDropdownCell.h"
 #import "PureLayout.h"
-
 @import QuartzCore;
-
 @interface CategoryDropdownCell () {
     BOOL animating;
 }

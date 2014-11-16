@@ -7,7 +7,5 @@
 //
 
 #import "ClubCell.h"
-
 @implementation ClubCell
-
 @end
