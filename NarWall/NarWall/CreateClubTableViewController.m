@@ -18,6 +18,8 @@
 
 - (void)viewDidLoad {
     
+    self.title = @"New Club";
+    
     //Placeholder color
     if ([self.nameTextField respondsToSelector:@selector(setAttributedPlaceholder:)]) {
         
@@ -76,12 +78,15 @@
 }
 
 - (void)doneClub {
+    PFUser *user = [PFUser currentUser];
     PFObject *club = [PFObject objectWithClassName:@"Clubs"];
     club[@"name"] = self.nameTextField.text;
     club[@"meetingTimes"] = self.meetingTextField.text;
     club[@"location"] = self.locationTextField.text;
     club[@"category"] = self.categoryLabel.text;
     club[@"description"] = self.descriptionLabel.text;
+    club[@"contactName"] = [NSString stringWithFormat:@"%@ %@", user[@"firstName"], user[@"lastName"]];
+    club[@"contactEmail"] = user.email;
     [club saveInBackground];
     [self.delegate createClubTableViewController:self didSaveWithPFObject:club];
 }

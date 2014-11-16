@@ -22,6 +22,19 @@
     self.descriptionTextView.text = pfObject[@"description"];
     self.meetingLabel.text = pfObject[@"meetingTimes"];
     self.locationLabel.text = pfObject[@"location"];
+    self.membersTextView.text = @"";
+    
+    if (!pfObject[@"members"]) {
+        pfObject[@"members"] = [NSMutableArray array];
+        [pfObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
+            if (error || !succeeded) {
+                [pfObject saveEventually];
+            }
+        }];
+    }
+    for (PFUser *member in pfObject[@"members"]) {
+        self.membersTextView.text = [NSString stringWithFormat:@"%@, %@ %@", self.membersTextView.text, member[@"firstName"], member[@"lastName"]];
+    }
     
     PFUser *user = [PFUser currentUser];
     self.isFavorited = NO;
@@ -42,7 +55,7 @@
         }];
     }
     
-    UIBarButtonItem *favoritesButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed: self.isFavorited ? @"Favorites Pressed" : @"Favorites"] style:UIBarButtonItemStylePlain target:self action:@selector(addToFavorites:)];
+    UIBarButtonItem *favoritesButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed: self.isFavorited ? @"Favorites-Pressed" : @"Favorites-Normal"] style:UIBarButtonItemStylePlain target:self action:@selector(addToFavorites:)];
     self.navigationItem.rightBarButtonItem = favoritesButton;
 }
 
@@ -55,14 +68,14 @@
     self.isFavorited = !self.isFavorited;
     
     if (self.isFavorited) {
-        [rightBarButtonItem setImage:[UIImage imageNamed:@"Favorites Pressed"]];
+        [rightBarButtonItem setImage:[UIImage imageNamed:@"Favorites-Pressed"]];
         
         NSMutableArray *array = [NSMutableArray arrayWithArray:user[@"favoriteClubs"]];
         [array addObject:self.club];
         user[@"favoriteClubs"] = array;
         
     } else {
-        [rightBarButtonItem setImage:[UIImage imageNamed:@"Favorites"]];
+        [rightBarButtonItem setImage:[UIImage imageNamed:@"Favorites-Normal"]];
         
         //Remove self from users favorites array
         NSMutableArray *array = [NSMutableArray arrayWithArray:user[@"favoriteClubs"]];
