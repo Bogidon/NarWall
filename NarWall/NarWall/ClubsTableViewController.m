@@ -168,10 +168,13 @@
             //Categories
             break;
             
-        case 2:
+        case 2: {
             //Sign Out
+            [PFUser logOut];
+            UIViewController *signInSreen = [self.storyboard instantiateViewControllerWithIdentifier:@"login"];
+            [self presentViewController:signInSreen animated:YES completion:nil];
             break;
-            
+        }
         default:
             break;
     }

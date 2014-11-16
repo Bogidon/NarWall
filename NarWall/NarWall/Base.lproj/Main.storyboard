@@ -33,23 +33,6 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="15t-72-wLp">
-            <objects>
-                <navigationController useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="WIJ-Nx-SV5" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hDt-ez-ank">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="1n8-Ka-kFI" kind="relationship" relationship="rootViewController" id="Tbo-Rl-flw"/>
-                        <segue destination="Z3L-T1-QAJ" kind="presentation" identifier="main" id="HaC-Cz-yM5"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fSM-Nq-qcv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="243" y="1742"/>
-        </scene>
         <!--Login View Controller-->
         <scene sceneID="49e-6y-JcT">
             <objects>
@@ -62,7 +45,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyk-eU-IFo" customClass="TPKeyboardAvoidingScrollView">
+                            <scrollView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyk-eU-IFo" customClass="TPKeyboardAvoidingScrollView">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-header" translatesAutoresizingMaskIntoConstraints="NO" id="Qyf-3C-RQO">
@@ -90,7 +73,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qPQ-Vt-Kcv">
                                         <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Itc-qh-4Yd">
                                         <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -114,6 +97,12 @@
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                         <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="24"/>
                                         <color key="textColor" red="0.32549019607843138" green="0.27843137254901962" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Uf-VV-okY">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="24"/>
+                                        <color key="textColor" red="0.32549019607843138" green="0.27843137254901962" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abg-TD-9Ax">
@@ -145,12 +134,6 @@
                                             <action selector="login" destination="1n8-Ka-kFI" eventType="touchUpInside" id="M0f-gV-5o3"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Uf-VV-okY">
-                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="24"/>
-                                        <color key="textColor" red="0.32549019607843138" green="0.27843137254901962" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93333333330000001" green="0.16078431369999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -165,24 +148,28 @@
                                     <constraint firstItem="tzh-bz-wAs" firstAttribute="trailing" secondItem="Qyf-3C-RQO" secondAttribute="trailing" id="BED-wW-SkJ"/>
                                     <constraint firstItem="Itc-qh-4Yd" firstAttribute="leading" secondItem="6Uf-VV-okY" secondAttribute="leading" id="Cbh-MF-c3O"/>
                                     <constraint firstAttribute="trailing" secondItem="Qyf-3C-RQO" secondAttribute="trailing" constant="32" id="DZS-PV-hT7"/>
-                                    <constraint firstAttribute="bottom" secondItem="abg-TD-9Ax" secondAttribute="bottom" constant="40" id="ILM-RS-1IM">
-                                        <variation key="widthClass=compact" constant="11"/>
-                                    </constraint>
                                     <constraint firstItem="6Uf-VV-okY" firstAttribute="top" secondItem="Itc-qh-4Yd" secondAttribute="bottom" constant="8" id="IUL-KI-hPx"/>
+                                    <constraint firstAttribute="bottom" secondItem="abg-TD-9Ax" secondAttribute="bottom" id="SxH-WT-NzE">
+                                        <variation key="widthClass=compact" constant="0.0"/>
+                                    </constraint>
                                     <constraint firstItem="Qyf-3C-RQO" firstAttribute="top" secondItem="tyk-eU-IFo" secondAttribute="top" constant="32" id="Ta9-y5-0JA">
-                                        <variation key="widthClass=compact" constant="40"/>
+                                        <variation key="widthClass=compact" constant="25"/>
                                     </constraint>
                                     <constraint firstItem="Qyf-3C-RQO" firstAttribute="leading" secondItem="tyk-eU-IFo" secondAttribute="leading" constant="32" id="Uhp-jK-5iY"/>
                                     <constraint firstAttribute="bottom" secondItem="abg-TD-9Ax" secondAttribute="bottom" priority="250" constant="195" id="V88-yi-Sbh">
                                         <variation key="widthClass=compact" constant="194"/>
                                     </constraint>
-                                    <constraint firstItem="abg-TD-9Ax" firstAttribute="top" secondItem="qPQ-Vt-Kcv" secondAttribute="bottom" constant="8" id="WNl-ma-H3l"/>
+                                    <constraint firstItem="abg-TD-9Ax" firstAttribute="top" secondItem="qPQ-Vt-Kcv" secondAttribute="bottom" constant="8" id="WNl-ma-H3l">
+                                        <variation key="widthClass=compact" constant="16"/>
+                                    </constraint>
                                     <constraint firstItem="qPQ-Vt-Kcv" firstAttribute="top" secondItem="6Uf-VV-okY" secondAttribute="bottom" constant="-3" id="XBN-U5-ODf">
                                         <variation key="widthClass=compact" constant="0.0"/>
                                     </constraint>
                                     <constraint firstItem="qPQ-Vt-Kcv" firstAttribute="leading" secondItem="6Uf-VV-okY" secondAttribute="leading" id="XTb-m5-dd6"/>
                                     <constraint firstItem="Itc-qh-4Yd" firstAttribute="trailing" secondItem="6Uf-VV-okY" secondAttribute="trailing" id="a80-SB-LT6"/>
-                                    <constraint firstAttribute="height" constant="326" id="att-LW-1hp"/>
+                                    <constraint firstAttribute="height" constant="326" id="att-LW-1hp">
+                                        <variation key="widthClass=compact" constant="330"/>
+                                    </constraint>
                                     <constraint firstItem="tzh-bz-wAs" firstAttribute="centerX" secondItem="tyk-eU-IFo" secondAttribute="centerX" id="bxp-ov-8X4"/>
                                     <constraint firstItem="Itc-qh-4Yd" firstAttribute="trailing" secondItem="tzh-bz-wAs" secondAttribute="trailing" constant="-1" id="j2K-bE-N1e">
                                         <variation key="widthClass=compact" constant="0.0"/>
@@ -196,8 +183,8 @@
                                     </constraint>
                                     <constraint firstAttribute="trailing" secondItem="Qyf-3C-RQO" secondAttribute="trailing" constant="33" id="tNb-sE-LTz"/>
                                     <constraint firstItem="qPQ-Vt-Kcv" firstAttribute="trailing" secondItem="6Uf-VV-okY" secondAttribute="trailing" id="ugc-0G-Dcc"/>
-                                    <constraint firstItem="tzh-bz-wAs" firstAttribute="top" secondItem="Qyf-3C-RQO" secondAttribute="bottom" priority="750" constant="8" id="zUo-tc-HYI">
-                                        <variation key="widthClass=compact" constant="24"/>
+                                    <constraint firstItem="tzh-bz-wAs" firstAttribute="top" secondItem="Qyf-3C-RQO" secondAttribute="bottom" priority="250" constant="8" id="zUo-tc-HYI">
+                                        <variation key="widthClass=compact" constant="14"/>
                                     </constraint>
                                 </constraints>
                                 <variation key="default">
@@ -206,8 +193,8 @@
                                         <exclude reference="qPQ-Vt-Kcv"/>
                                         <exclude reference="Itc-qh-4Yd"/>
                                         <exclude reference="tzh-bz-wAs"/>
-                                        <exclude reference="abg-TD-9Ax"/>
                                         <exclude reference="6Uf-VV-okY"/>
+                                        <exclude reference="abg-TD-9Ax"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="att-LW-1hp"/>
@@ -232,7 +219,7 @@
                                         <exclude reference="XTb-m5-dd6"/>
                                         <exclude reference="rUr-JF-88b"/>
                                         <exclude reference="ugc-0G-Dcc"/>
-                                        <exclude reference="ILM-RS-1IM"/>
+                                        <exclude reference="SxH-WT-NzE"/>
                                         <exclude reference="V88-yi-Sbh"/>
                                         <exclude reference="WNl-ma-H3l"/>
                                     </mask>
@@ -243,8 +230,8 @@
                                         <include reference="qPQ-Vt-Kcv"/>
                                         <include reference="Itc-qh-4Yd"/>
                                         <include reference="tzh-bz-wAs"/>
-                                        <include reference="abg-TD-9Ax"/>
                                         <include reference="6Uf-VV-okY"/>
+                                        <include reference="abg-TD-9Ax"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="att-LW-1hp"/>
@@ -269,7 +256,7 @@
                                         <include reference="XTb-m5-dd6"/>
                                         <include reference="rUr-JF-88b"/>
                                         <include reference="ugc-0G-Dcc"/>
-                                        <include reference="ILM-RS-1IM"/>
+                                        <include reference="SxH-WT-NzE"/>
                                         <exclude reference="V88-yi-Sbh"/>
                                         <include reference="WNl-ma-H3l"/>
                                     </mask>
@@ -282,6 +269,7 @@
                                     <constraint firstAttribute="height" constant="215" id="DTb-pG-YP9"/>
                                     <constraint firstAttribute="height" constant="215" id="L3z-d2-tzj"/>
                                     <constraint firstAttribute="width" constant="183" id="Rug-Rv-U2A"/>
+                                    <constraint firstAttribute="width" secondItem="xcN-0I-Iek" secondAttribute="height" multiplier="17:22" id="nGD-hh-wLJ"/>
                                     <constraint firstAttribute="width" constant="183" id="pde-xX-UKn"/>
                                 </constraints>
                                 <variation key="default">
@@ -290,15 +278,17 @@
                                         <exclude reference="DTb-pG-YP9"/>
                                         <exclude reference="L3z-d2-tzj"/>
                                         <exclude reference="Rug-Rv-U2A"/>
+                                        <exclude reference="nGD-hh-wLJ"/>
                                         <exclude reference="pde-xX-UKn"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="BLo-1T-QsU"/>
+                                        <exclude reference="BLo-1T-QsU"/>
                                         <exclude reference="DTb-pG-YP9"/>
                                         <exclude reference="L3z-d2-tzj"/>
                                         <exclude reference="Rug-Rv-U2A"/>
+                                        <include reference="nGD-hh-wLJ"/>
                                         <exclude reference="pde-xX-UKn"/>
                                     </mask>
                                 </variation>
@@ -307,7 +297,7 @@
                         <color key="backgroundColor" red="0.93333333330000001" green="0.16078431369999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xcN-0I-Iek" firstAttribute="top" secondItem="tyk-eU-IFo" secondAttribute="bottom" constant="-7" id="0fX-7L-r0p">
-                                <variation key="widthClass=compact" constant="19"/>
+                                <variation key="widthClass=compact" constant="8"/>
                             </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="xcN-0I-Iek" secondAttribute="trailing" constant="114" id="571-d4-xy1"/>
                             <constraint firstItem="tyk-eU-IFo" firstAttribute="top" secondItem="bHi-uD-spb" secondAttribute="top" id="9QC-7A-H3c"/>
@@ -357,6 +347,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="loginButton" destination="abg-TD-9Ax" id="WBX-Cu-4g6"/>
+                        <outlet property="loginButtonTopConstraint" destination="WNl-ma-H3l" id="Coe-gJ-EhP"/>
                         <outlet property="netIDField" destination="Itc-qh-4Yd" id="ubD-lv-636"/>
                         <outlet property="passwordField" destination="qPQ-Vt-Kcv" id="gFK-fB-yNW"/>
                         <outlet property="scrollView" destination="tyk-eU-IFo" id="v3L-OA-P3j"/>

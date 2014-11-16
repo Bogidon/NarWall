@@ -8,12 +8,15 @@
 
 #import "LoginViewController.h"
 #import "TPKeyboardAvoidingScrollView.h"
+#import "PureLayout.h"
 #import <Parse/Parse.h>
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet TPKeyboardAvoidingScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UITextField *netIDField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *loginButtonTopConstraint;
+@property UILabel *errorLabel;
 -(IBAction)login;
 @end
 
@@ -40,13 +43,37 @@
 
 -(IBAction)login{
     __block UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] init];
-    spinner.center = self.loginButton.center;
-    self.loginButton.hidden = YES;
     [self.view addSubview:spinner];
+    [spinner autoAlignAxis:ALAxisVertical toSameAxisOfView:self.loginButton];
+    [spinner autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.loginButton];
+    
+    self.loginButton.hidden = YES;
+
+    
     [spinner startAnimating];
     [PFUser logInWithUsernameInBackground:self.netIDField.text password:self.passwordField.text block:^(PFUser *user, NSError *error){
         if(error){
             //Tell them they have a wrong password
+            if (!self.errorLabel) {
+                self.errorLabel = [[UILabel alloc] init];
+                self.errorLabel.text = @"Invalid Username or Password";
+                self.errorLabel.textColor = [UIColor whiteColor];
+                self.errorLabel.font = [UIFont fontWithName:@"ITCFranklinGothicStd-Book" size:16.0];
+                self.errorLabel.alpha = 0.0;
+                [self.scrollView addSubview:self.errorLabel];
+                
+                [self.scrollView setNeedsLayout];
+                [UIView animateWithDuration:1.0
+                                 animations:^(void){
+                                     [self.scrollView removeConstraint:self.loginButtonTopConstraint];
+                                     [self.errorLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.passwordField withOffset:8.0];
+                                     [self.errorLabel autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:self.loginButton withOffset:-5.0];
+                                     [self.errorLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
+                                     self.errorLabel.alpha = 1.0;
+                                 }];
+            }
+            
+            
             [spinner stopAnimating];
             [spinner removeFromSuperview];
             self.loginButton.hidden = NO;
@@ -55,7 +82,8 @@
             [spinner stopAnimating];
             [spinner removeFromSuperview];
             self.loginButton.hidden = NO;
-            [self.navigationController performSegueWithIdentifier:@"main" sender:self.navigationController];
+            UIViewController *mainScreen = [self.storyboard instantiateViewControllerWithIdentifier:@"root"];
+            [self presentViewController:mainScreen animated:YES completion:nil];
         }
     }];
 }
