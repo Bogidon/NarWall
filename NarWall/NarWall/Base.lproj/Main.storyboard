@@ -379,7 +379,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="P5c-8F-8iq">
             <objects>
-                <tabBarController storyboardIdentifier="root" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z3L-T1-QAJ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="root" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z3L-T1-QAJ" customClass="NSCTabBarController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="63z-Yk-ZBp">
@@ -864,7 +864,7 @@
         <!--Clubs-->
         <scene sceneID="GPy-mK-BZe">
             <objects>
-                <navigationController id="JeF-es-3Hb" sceneMemberID="viewController">
+                <navigationController id="JeF-es-3Hb" customClass="NSCNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Clubs" id="Ggt-up-R1x"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="49n-sx-ZTC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
