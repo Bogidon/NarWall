@@ -6,10 +6,8 @@
 //  Copyright (c) 2014 New School Crew. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
+@import UIKit;
 @interface ClubCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
-
 @end
