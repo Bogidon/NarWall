@@ -94,7 +94,7 @@
         NSString *name = [self.clubCategoryManager nameOfCategoryAtIndex:indexPath.section];
         cell.titleLabel.text = name;
         
-        UIImage *iconImage = [UIImage imageNamed:[name lowercaseString]];
+        UIImage *iconImage = [UIImage imageNamed:name];
         if (iconImage) {
             cell.iconImageView.image = iconImage;
         }
