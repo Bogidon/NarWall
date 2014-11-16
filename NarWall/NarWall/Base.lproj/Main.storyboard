@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B23" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Z3L-T1-QAJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A386a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Z3L-T1-QAJ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -1141,7 +1141,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="45" y="12" width="85" height="24"/>
+                                                        <rect key="frame" x="45" y="12" width="84.5" height="23.5"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -1390,9 +1390,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dML-ir-ZcH">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <color key="backgroundColor" red="0.98431372549019602" green="0.81960784313725488" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="0.0" width="400" height="255"/>
-                                        </variation>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a really long club name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50y-pd-DPD">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -1437,9 +1434,6 @@
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Book" family="ITC Franklin Gothic Std" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="8" y="50" width="384" height="184"/>
-                                        </variation>
                                     </textView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZ5-lz-gMl" userLabel="Separator">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -1453,8 +1447,7 @@
                                                 <exclude reference="2nz-pa-ki4"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="16" y="255" width="368" height="1"/>
+                                        <variation key="widthClass=compact">
                                             <mask key="constraints">
                                                 <include reference="2nz-pa-ki4"/>
                                             </mask>
@@ -1465,9 +1458,6 @@
                                         <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Book" family="ITC Franklin Gothic Std" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="134" y="272" width="258" height="20"/>
-                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meeting times:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGO-BG-BHC">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -1484,8 +1474,7 @@
                                                 <exclude reference="nVG-et-8xl"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="16" y="272" width="110" height="20"/>
+                                        <variation key="widthClass=compact">
                                             <mask key="constraints">
                                                 <include reference="nVG-et-8xl"/>
                                             </mask>
@@ -1496,9 +1485,6 @@
                                         <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Book" family="ITC Franklin Gothic Std" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="91" y="300" width="301" height="20"/>
-                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96t-DQ-YpX">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -1513,8 +1499,7 @@
                                                 <exclude reference="Spr-rL-OyZ"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="16" y="300" width="67" height="20"/>
+                                        <variation key="widthClass=compact">
                                             <mask key="constraints">
                                                 <include reference="Spr-rL-OyZ"/>
                                             </mask>
@@ -1533,8 +1518,7 @@
                                                 <exclude reference="rAd-kP-VJy"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="16" y="336" width="368" height="1"/>
+                                        <variation key="widthClass=compact">
                                             <mask key="constraints">
                                                 <include reference="rAd-kP-VJy"/>
                                             </mask>
@@ -1544,9 +1528,6 @@
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Book" family="ITC Franklin Gothic Std" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="16" y="422" width="368" height="129"/>
-                                        </variation>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLv-Sx-Udk">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1565,8 +1546,7 @@
                                                 <exclude reference="wwK-9Y-S6q"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="76" y="345" width="248" height="69"/>
+                                        <variation key="widthClass=compact">
                                             <mask key="constraints">
                                                 <include reference="3Me-Mr-gDH"/>
                                                 <exclude reference="wwK-9Y-S6q"/>
@@ -1583,7 +1563,7 @@
                                             <constraint firstAttribute="width" constant="248" id="iJv-xt-BbV">
                                                 <variation key="widthClass=compact" constant="80"/>
                                             </constraint>
-                                            <constraint firstAttribute="width" secondItem="8Kg-9O-oeQ" secondAttribute="height" multiplier="169:87" id="tHT-HU-asE"/>
+                                            <constraint firstAttribute="width" secondItem="8Kg-9O-oeQ" secondAttribute="height" multiplier="44:33" id="tHT-HU-asE"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="18"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
@@ -1997,7 +1977,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Join Button" width="169" height="87"/>
+        <image name="Join Button" width="44" height="33"/>
         <image name="Mail Button" width="254" height="87"/>
         <image name="collapse" width="22" height="22"/>
         <image name="detailDisclosure" width="12" height="12"/>
