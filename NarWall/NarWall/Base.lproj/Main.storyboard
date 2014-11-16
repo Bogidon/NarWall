@@ -13,13 +13,13 @@
             <string>ITCFranklinGothicStd-Book</string>
             <string>ITCFranklinGothicStd-Book</string>
             <string>ITCFranklinGothicStd-Book</string>
-            <string>ITCFranklinGothicStd-Book</string>
         </mutableArray>
         <mutableArray key="ITCFranklinGothicStd-Hvy.otf">
             <string>ITCFranklinGothicStd-Hvy</string>
             <string>ITCFranklinGothicStd-Hvy</string>
         </mutableArray>
         <mutableArray key="ITCFranklinGothicStd-Med.otf">
+            <string>ITCFranklinGothicStd-Med</string>
             <string>ITCFranklinGothicStd-Med</string>
             <string>ITCFranklinGothicStd-Med</string>
             <string>ITCFranklinGothicStd-Med</string>
@@ -78,9 +78,6 @@
                                         <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="32" y="205" width="350" height="30"/>
-                                        </variation>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Itc-qh-4Yd">
                                         <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -94,8 +91,7 @@
                                                 <exclude reference="KKs-cN-pPe"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="32" y="139" width="350" height="30"/>
+                                        <variation key="widthClass=compact">
                                             <mask key="constraints">
                                                 <include reference="KKs-cN-pPe"/>
                                             </mask>
@@ -106,18 +102,12 @@
                                         <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="24"/>
                                         <color key="textColor" red="0.32549019607843138" green="0.27843137254901962" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="32" y="111" width="350" height="28"/>
-                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Uf-VV-okY">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                         <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="24"/>
                                         <color key="textColor" red="0.32549019607843138" green="0.27843137254901962" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="32" y="177" width="350" height="28"/>
-                                        </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abg-TD-9Ax">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -138,8 +128,7 @@
                                                 <exclude reference="U2X-fC-PGm"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="126" y="251" width="162" height="55"/>
+                                        <variation key="widthClass=compact">
                                             <mask key="constraints">
                                                 <include reference="R3X-dj-l1Z"/>
                                                 <include reference="U2X-fC-PGm"/>
@@ -168,7 +157,7 @@
                                         <variation key="widthClass=compact" constant="0.0"/>
                                     </constraint>
                                     <constraint firstItem="Qyf-3C-RQO" firstAttribute="top" secondItem="tyk-eU-IFo" secondAttribute="top" constant="32" id="Ta9-y5-0JA">
-                                        <variation key="widthClass=compact" constant="25"/>
+                                        <variation key="widthClass=compact" constant="80"/>
                                     </constraint>
                                     <constraint firstItem="Qyf-3C-RQO" firstAttribute="leading" secondItem="tyk-eU-IFo" secondAttribute="leading" constant="32" id="Uhp-jK-5iY"/>
                                     <constraint firstAttribute="bottom" secondItem="abg-TD-9Ax" secondAttribute="bottom" priority="250" constant="195" id="V88-yi-Sbh">
@@ -183,7 +172,7 @@
                                     <constraint firstItem="qPQ-Vt-Kcv" firstAttribute="leading" secondItem="6Uf-VV-okY" secondAttribute="leading" id="XTb-m5-dd6"/>
                                     <constraint firstItem="Itc-qh-4Yd" firstAttribute="trailing" secondItem="6Uf-VV-okY" secondAttribute="trailing" id="a80-SB-LT6"/>
                                     <constraint firstAttribute="height" constant="326" id="att-LW-1hp">
-                                        <variation key="widthClass=compact" constant="330"/>
+                                        <variation key="widthClass=compact" constant="400"/>
                                     </constraint>
                                     <constraint firstItem="tzh-bz-wAs" firstAttribute="centerX" secondItem="tyk-eU-IFo" secondAttribute="centerX" id="bxp-ov-8X4"/>
                                     <constraint firstItem="Itc-qh-4Yd" firstAttribute="trailing" secondItem="tzh-bz-wAs" secondAttribute="trailing" constant="-1" id="j2K-bE-N1e">
@@ -198,8 +187,8 @@
                                     </constraint>
                                     <constraint firstAttribute="trailing" secondItem="Qyf-3C-RQO" secondAttribute="trailing" constant="33" id="tNb-sE-LTz"/>
                                     <constraint firstItem="qPQ-Vt-Kcv" firstAttribute="trailing" secondItem="6Uf-VV-okY" secondAttribute="trailing" id="ugc-0G-Dcc"/>
-                                    <constraint firstItem="tzh-bz-wAs" firstAttribute="top" secondItem="Qyf-3C-RQO" secondAttribute="bottom" priority="250" constant="8" id="zUo-tc-HYI">
-                                        <variation key="widthClass=compact" constant="14"/>
+                                    <constraint firstItem="tzh-bz-wAs" firstAttribute="top" secondItem="Qyf-3C-RQO" secondAttribute="bottom" constant="8" id="zUo-tc-HYI">
+                                        <variation key="widthClass=compact" constant="48"/>
                                     </constraint>
                                 </constraints>
                                 <variation key="default">
@@ -312,14 +301,16 @@
                         <color key="backgroundColor" red="0.93333333330000001" green="0.16078431369999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xcN-0I-Iek" firstAttribute="top" secondItem="tyk-eU-IFo" secondAttribute="bottom" constant="-7" id="0fX-7L-r0p">
-                                <variation key="widthClass=compact" constant="8"/>
+                                <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="xcN-0I-Iek" secondAttribute="trailing" constant="114" id="571-d4-xy1"/>
                             <constraint firstItem="tyk-eU-IFo" firstAttribute="top" secondItem="bHi-uD-spb" secondAttribute="top" id="9QC-7A-H3c"/>
                             <constraint firstItem="tyk-eU-IFo" firstAttribute="leading" secondItem="bHi-uD-spb" secondAttribute="leading" id="SpW-OL-Dto"/>
                             <constraint firstItem="tyk-eU-IFo" firstAttribute="height" secondItem="bHi-uD-spb" secondAttribute="height" id="Zj5-N8-hMU"/>
                             <constraint firstAttribute="trailing" secondItem="tyk-eU-IFo" secondAttribute="trailing" id="jhw-PH-GBk"/>
-                            <constraint firstItem="xcN-0I-Iek" firstAttribute="leading" secondItem="bHi-uD-spb" secondAttribute="leadingMargin" constant="-16" id="pBB-eP-n65"/>
+                            <constraint firstItem="xcN-0I-Iek" firstAttribute="leading" secondItem="bHi-uD-spb" secondAttribute="leadingMargin" constant="-16" id="pBB-eP-n65">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="WVG-kd-7nJ" firstAttribute="top" secondItem="xcN-0I-Iek" secondAttribute="bottom" id="rf0-ga-M5h"/>
                             <constraint firstItem="tyk-eU-IFo" firstAttribute="bottom" secondItem="WVG-kd-7nJ" secondAttribute="top" id="zWl-O3-iOo"/>
                         </constraints>
@@ -1003,7 +994,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outdoors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UU-dF-FMR">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="22"/>
+                                                    <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="20"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="widthClass=compact" misplaced="YES">
@@ -1011,7 +1002,7 @@
                                                     </variation>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.9882352941176471" green="0.62352941176470589" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.9882352941176471" green="0.44313725490196076" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="0UU-dF-FMR" firstAttribute="leading" secondItem="2Aw-yv-Hcn" secondAttribute="leading" constant="52" id="01Z-Hm-EeP">
                                                     <variation key="widthClass=compact" constant="45"/>
@@ -1141,7 +1132,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="41" id="Pew-Tz-X9s"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Book" family="ITC Franklin Gothic Std" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Book" family="ITC Franklin Gothic Std" pointSize="15"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
@@ -1149,8 +1140,7 @@
                                                     <exclude reference="Pew-Tz-X9s"/>
                                                 </mask>
                                             </variation>
-                                            <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="8" y="30" width="384" height="41"/>
+                                            <variation key="widthClass=compact">
                                                 <mask key="constraints">
                                                     <include reference="Pew-Tz-X9s"/>
                                                 </mask>
@@ -1158,12 +1148,9 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="384" translatesAutoresizingMaskIntoConstraints="NO" id="xM8-SZ-rWG">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Book" family="ITC Franklin Gothic Std" pointSize="18"/>
+                                            <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="8" y="8" width="384" height="21"/>
-                                            </variation>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" red="0.99607843137254903" green="0.8784313725490196" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

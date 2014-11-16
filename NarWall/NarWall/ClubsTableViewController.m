@@ -13,6 +13,8 @@
 #import "ClubCategoryManager.h"
 #import "ClubCell.h"
 
+typedef void(^completionHandler)();
+
 @interface ClubsTableViewController () <UIActionSheetDelegate, CreateClubTableViewControllerDelegate>{
     NSMutableArray *categories;
     NSMutableArray *clubs;
@@ -30,30 +32,44 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.backgroundColor = [UIColor colorWithRed:255/255.0 green:246/255.0 blue:229/255.0 alpha:1.0];
+    
     self.title = @"Clubs";
+    self.tableView.backgroundColor = [UIColor colorWithRed:255/255.0 green:246/255.0 blue:229/255.0 alpha:1.0];
+    
     clubs = [NSMutableArray array];
     categories = [NSMutableArray array];
-    [self reloadTableViewData];
+    
+    [self getTableDataCompletion:nil];
+    
     //Configure settings button
     self.settingsBarButtonItem.title = @"\u2699";
+    
     UIFont *settingsFont = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:24.0];
     NSDictionary *settingsAttributeDict = [[NSDictionary alloc] initWithObjectsAndKeys:settingsFont, NSFontAttributeName, nil];
+    
     [self.settingsBarButtonItem setTitleTextAttributes:settingsAttributeDict forState:UIControlStateNormal];
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:self.refreshControl];
 }
--(void)reloadTableViewData{
-    self.clubCategoryManager = [[ClubCategoryManager alloc] init];
-    [self getClubData];
-}
+
 -(void)refresh{
     [self.refreshControl beginRefreshing];
-    [self reloadTableViewData];
-    [self.refreshControl endRefreshing];
+    [self getTableDataCompletion:^(){
+        
+        for (int i = 0; i < self.clubCategoryManager.categories.count; i++) {
+            CategoryDropdownCell *cell = (CategoryDropdownCell*)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:i]];
+            if (cell.direction == NSCPointerDirectionUp) {
+                [cell spinWithOptions:UIViewAnimationOptionTransitionNone];
+            }
+        }
+        
+        [self.refreshControl endRefreshing];
+    }];
 }
--(void)getClubData{
+
+-(void)getTableDataCompletion:(completionHandler)handler {
+    self.clubCategoryManager = [[ClubCategoryManager alloc] init];
     PFQuery *clubsQuery = [PFQuery queryWithClassName:@"Clubs"];
     [clubsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
         if (!error) {
@@ -63,6 +79,7 @@
             }
             
             [self.tableView reloadData];
+            if (handler) handler();
             
         } else {
             NSLog(@"%@", error);
@@ -91,8 +108,10 @@
     
     if (indexPath.row == 0) {
         CategoryDropdownCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"CategoryDropdownCell"];
+        ClubCategory *clubCategory = self.clubCategoryManager.categories[indexPath.section];
         NSString *name = [self.clubCategoryManager nameOfCategoryAtIndex:indexPath.section];
-        cell.titleLabel.text = name;
+        NSInteger clubCount = clubCategory.clubs.count;
+        cell.titleLabel.text =  [NSString stringWithFormat:@"%@ (%lo)", name, (long) clubCount];
         
         UIImage *iconImage = [UIImage imageNamed:name];
         if (iconImage) {
