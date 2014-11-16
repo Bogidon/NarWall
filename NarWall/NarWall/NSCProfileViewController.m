@@ -92,13 +92,11 @@
     }
 }
 -(void)showBarButtons{
-    NSLog(@"Save button should appear");
     if(!self.navigationItem.rightBarButtonItem){
         UIBarButtonItem *save = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save)];
         UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelEditing)];
         self.navigationItem.leftBarButtonItem = cancel;
         self.navigationItem.rightBarButtonItem = save;
-        NSLog(@"%@", save);
     }
 }
 #pragma mark - @property Lazy Instantiation
