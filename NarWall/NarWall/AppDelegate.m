@@ -21,12 +21,11 @@
     [Parse setApplicationId:@"Ndv4RrfwMNIt6YB09WnvqrzeyvYjb2jKMuvMmXwy"
                   clientKey:@"yKJpjIKCKG4eKeveAYwXaBMLcZayVwzkd0nN5ba7"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    NSLog(@"%@", [PFUser currentUser]);
+
     if(![PFUser currentUser]){
         //No user is logged in, and we need to present the login view controller modally
         LoginViewController *login = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"login"];
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:login];
-        self.window.rootViewController = nav;
+        self.window.rootViewController = login;
     }
     return YES;
 }

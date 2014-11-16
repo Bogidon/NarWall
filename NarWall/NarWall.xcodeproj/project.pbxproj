@@ -34,6 +34,7 @@
 		43A7ABE51A1700E600C5C6AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43A7ABE41A1700E600C5C6AC /* Images.xcassets */; };
 		43A7ABE81A1700E600C5C6AC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43A7ABE61A1700E600C5C6AC /* LaunchScreen.xib */; };
 		43A7ABF41A1700E600C5C6AC /* NarWallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A7ABF31A1700E600C5C6AC /* NarWallTests.m */; };
+		43D4BC341A183CD7004816DA /* ITCFranklinGothicStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 431AA6F11A1800BA00B52D02 /* ITCFranklinGothicStd-Book.otf */; };
 		4C60C3731A171B1700960F7F /* ITCFranklinGothicStd-Hvy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60C3721A171B1600960F7F /* ITCFranklinGothicStd-Hvy.otf */; };
 		4C60C3751A171BAB00960F7F /* ITCFranklinGothicStd-Med.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60C3741A171BAB00960F7F /* ITCFranklinGothicStd-Med.otf */; };
 		4C60C37B1A17F95100960F7F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60C37A1A17F95100960F7F /* LoginViewController.m */; };
@@ -271,7 +272,6 @@
 				43A7ABE11A1700E600C5C6AC /* Main.storyboard */,
 				43A7ABE41A1700E600C5C6AC /* Images.xcassets */,
 				43A7ABE61A1700E600C5C6AC /* LaunchScreen.xib */,
-				4C60C3711A171AFB00960F7F /* Custom Fonts */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -388,6 +388,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D4BC341A183CD7004816DA /* ITCFranklinGothicStd-Book.otf in Resources */,
 				43A7ABE31A1700E600C5C6AC /* Main.storyboard in Resources */,
 				4C60C3731A171B1700960F7F /* ITCFranklinGothicStd-Hvy.otf in Resources */,
 				43A7ABE81A1700E600C5C6AC /* LaunchScreen.xib in Resources */,
@@ -455,7 +456,6 @@
 				431AA6ED1A17D4B400B52D02 /* ClubCategoryManager.m in Sources */,
 				432BA53F1A172F8B00D8B173 /* CreateClubTableViewController.m in Sources */,
 				4C60C3811A17FDFC00960F7F /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
-				431AA6E71A17D25F00B52D02 /* Club.m in Sources */,
 				431AA6F01A17DCAA00B52D02 /* ClubCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
