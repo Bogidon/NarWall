@@ -49,6 +49,18 @@
     }
     self.info = @[self.firstNameField.text, self.lastNameField.text, self.emailField.text].mutableCopy;
     [self hideBarButtons];
+    self.emailField.adjustsFontSizeToFitWidth = YES;
+    self.firstNameField.adjustsFontSizeToFitWidth = YES;
+    self.lastNameField.adjustsFontSizeToFitWidth = YES;
+    self.emailField.minimumFontSize = 15;
+    self.firstNameField.minimumFontSize = 35;
+    self.lastNameField.minimumFontSize = 35;
+//    [self.emailField addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:nil];
+//    [self.firstNameField addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:nil];
+//    [self.lastNameField addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange:) name:UITextFieldTextDidChangeNotification object:self.emailField];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange:) name:UITextFieldTextDidChangeNotification object:self.firstNameField];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange:) name:UITextFieldTextDidChangeNotification object:self.lastNameField];
 }
 -(IBAction)save:(UIBarButtonItem *)sender{
     if(![self.firstNameField.text isEqualToString:@"Your First Name"] && ![self.firstNameField.text isEqualToString:@""]){
@@ -134,5 +146,17 @@
             textField.text = @"email@example.com";
         }
     }
+}
+#pragma mark - Key - Value Observing
+//-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
+//    UITextField *field = (UITextField *)object;
+//    NSLog(field.adjustsFontSizeToFitWidth ? @"YES" : @"NO");
+//}
+-(void)textDidChange:(id<UITextInput>)textInput{
+    //UITextField *field = (UITextField *)textInput[@"object"];
+    NSLog(self.emailField.adjustsFontSizeToFitWidth ? @"YES" : @"NO");
+    self.emailField.adjustsFontSizeToFitWidth = YES;
+    self.firstNameField.adjustsFontSizeToFitWidth = YES;
+    self.lastNameField.adjustsFontSizeToFitWidth = YES;
 }
 @end

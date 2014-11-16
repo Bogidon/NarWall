@@ -9,8 +9,7 @@
 #import "LoginViewController.h"
 #import "TPKeyboardAvoidingScrollView.h"
 #import "PureLayout.h"
-#import <Parse/Parse.h>
-
+@import Parse;
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet TPKeyboardAvoidingScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UITextField *netIDField;
