@@ -28,11 +28,21 @@
         self.window.rootViewController = login;
     }
     
-    //Set tab bar fonts
-    UIFont *font = [UIFont fontWithName:@"ITCFranklinGothicStd-Med" size:24.0];
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName: font} forState:UIControlStateNormal];
-    [[UITabBar appearance] setTintColor:[UIColor colorWithRed:253/255.0 green:65/255.0 blue:32/255.0 alpha:1.0]];
+    //Tab bar appearance
+    UIFont *tabBarFont = [UIFont fontWithName:@"ITCFranklinGothicStd-Med" size:24.0];
+    UIColor *redTextColor = [UIColor colorWithRed:253/255.0 green:65/255.0 blue:32/255.0 alpha:1.0];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName: tabBarFont} forState:UIControlStateNormal];
+    [[UITabBar appearance] setTintColor: redTextColor];
     [[UITabBarItem appearance] setTitlePositionAdjustment:UIOffsetMake(0.0, -10.0)];
+    
+    //Nav bar appearance
+    UIFont *navBarFont = [UIFont fontWithName:@"ITCFranklinGothicStd-Book" size:18.0];
+    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil]
+     setTitleTextAttributes:
+     @{NSForegroundColorAttributeName: redTextColor,
+       NSFontAttributeName:navBarFont
+       }
+     forState:UIControlStateNormal];
     
     return YES;
 }
