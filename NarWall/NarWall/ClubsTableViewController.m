@@ -46,10 +46,10 @@ typedef void(^completionHandler)();
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self getTableData:^(){
-        [self spinAllDisclosuresUp];
-    }];
+//    [super viewWillAppear:animated];
+//    [self getTableData:^(){
+//        [self spinAllDisclosuresUp];
+//    }];
 }
 
 -(void)refresh{
