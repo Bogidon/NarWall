@@ -64,6 +64,11 @@
     self.info = @[self.firstNameField.text, self.lastNameField.text, self.emailField.text].mutableCopy;
     [self dismissKeyboard];
 }
+
+- (IBAction)signOut:(UIBarButtonItem *)sender{
+    [PFUser logOut];
+    [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"login"] animated:YES completion:nil];
+}
 -(void)cancelEditing{
     [self dismissKeyboard];
     self.firstNameField.text = (NSString *)self.info[0];
@@ -87,14 +92,14 @@
     if(self.navigationItem.rightBarButtonItem){
         self.navigationItem.rightBarButtonItem = nil;
     }
-    if(self.navigationItem.leftBarButtonItem){
-        self.navigationItem.leftBarButtonItem = nil;
-    }
+    UIBarButtonItem *signOut = [[UIBarButtonItem alloc] initWithTitle:@"Sign Out" style:UIBarButtonItemStylePlain target:self action:@selector(signOut:)];
+    self.navigationItem.leftBarButtonItem = signOut;
 }
 -(void)showBarButtons{
     if(!self.navigationItem.rightBarButtonItem){
         UIBarButtonItem *save = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save)];
         UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelEditing)];
+        cancel.title = @"Cancel";
         self.navigationItem.leftBarButtonItem = cancel;
         self.navigationItem.rightBarButtonItem = save;
     }
