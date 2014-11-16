@@ -563,20 +563,17 @@
                                         <exclude reference="KfW-ar-Pwp"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="KfW-ar-Pwp"/>
-                                    </mask>
-                                </variation>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.96470588235294119" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="TPS-U7-4Ii"/>
-                                <exclude reference="hn6-d7-Z7E"/>
-                                <exclude reference="yck-Vq-56H"/>
-                                <exclude reference="TMJ-km-Liv"/>
+                                <exclude reference="the-pk-tpw"/>
+                                <exclude reference="ERM-e9-wig"/>
+                                <exclude reference="DSc-KO-20y"/>
+                                <exclude reference="Rj2-Dc-Iqj"/>
+                                <exclude reference="lTZ-VD-zFP"/>
+                                <exclude reference="UAF-vR-3w8"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="eLS-am-tlu"/>
@@ -592,10 +589,12 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="TPS-U7-4Ii"/>
-                                <include reference="hn6-d7-Z7E"/>
-                                <include reference="yck-Vq-56H"/>
-                                <include reference="TMJ-km-Liv"/>
+                                <include reference="the-pk-tpw"/>
+                                <include reference="ERM-e9-wig"/>
+                                <include reference="DSc-KO-20y"/>
+                                <include reference="Rj2-Dc-Iqj"/>
+                                <include reference="lTZ-VD-zFP"/>
+                                <include reference="UAF-vR-3w8"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="eLS-am-tlu"/>
