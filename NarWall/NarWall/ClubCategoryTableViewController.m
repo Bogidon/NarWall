@@ -21,12 +21,11 @@
     [super viewDidLoad];
     
     categoryTypes = [NSArray arrayWithObjects:
-                     @"Favorites",
                      @"Social & Interests",
                      @"Academic",
                      @"Arts, Music, Performance",
                      @"Political",
-                     @"Faith",
+                     @"Faith Based",
                      nil];
 }
 
@@ -47,7 +46,7 @@
     NSString *imageName = [[categoryType stringByReplacingOccurrencesOfString:@" " withString:@""] lowercaseString];
     
     CategoryCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"CategoryCell"];
-    [cell.iconImageView setImage:[UIImage imageNamed:imageName]];
+    [cell.iconImageView setImage:[UIImage imageNamed:categoryType]];
     cell.titleLabel.text = categoryType;
     cell.separatorInset = UIEdgeInsetsMake(0, 45, 0, 0);
     
