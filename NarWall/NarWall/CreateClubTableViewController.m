@@ -39,8 +39,6 @@
     doneBarButton.action = @selector(doneClub);
 }
 
-
-
 #pragma mark - Transitions
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"CategoriesSegue"]) {
