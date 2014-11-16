@@ -17,7 +17,7 @@
 -(void)dismissKeyboard;
 @end
 @implementation NSCProfileViewController
-- (void)viewDidLoad {
+-(void)viewDidLoad{
     [super viewDidLoad];
     self.firstNameField.delegate = self;
     self.lastNameField.delegate = self;
@@ -68,8 +68,7 @@
     self.info = @[self.firstNameField.text, self.lastNameField.text, self.emailField.text].mutableCopy;
     [self dismissKeyboard];
 }
-
-- (IBAction)signOut:(UIBarButtonItem *)sender{
+-(IBAction)signOut:(UIBarButtonItem *)sender{
     [PFUser logOut];
     [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"login"] animated:YES completion:nil];
 }
