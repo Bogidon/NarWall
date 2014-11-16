@@ -161,18 +161,22 @@
     [settingsActionSheet showFromBarButtonItem:self.settingsBarButtonItem animated:YES];
 }
 
+- (IBAction)newClub:(UIBarButtonItem *)sender {
+    UINavigationController *createClubNavigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"CreateClubNavigationController"];
+    
+    if ([createClubNavigationController.topViewController isKindOfClass:[CreateClubTableViewController class]]) {
+        CreateClubTableViewController *createClubViewController = (CreateClubTableViewController*)createClubNavigationController.topViewController;
+        createClubViewController.delegate = self;
+    }
+    
+    [self presentViewController:createClubNavigationController animated:YES completion:nil];
+}
+
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
         case 0 :{
             // Add club
-            UINavigationController *createClubNavigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"CreateClubNavigationController"];
-            
-            if ([createClubNavigationController.topViewController isKindOfClass:[CreateClubTableViewController class]]) {
-                CreateClubTableViewController *createClubViewController = (CreateClubTableViewController*)createClubNavigationController.topViewController;
-                createClubViewController.delegate = self;
-            }
-            
-            [self presentViewController:createClubNavigationController animated:YES completion:nil];
+            [self newClub:self.addButton];
             break;
         }
         
