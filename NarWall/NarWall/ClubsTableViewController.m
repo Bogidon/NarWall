@@ -1,4 +1,4 @@
-//
+    //
 //  ClubsTableViewController.m
 //  NarWall
 //
@@ -54,6 +54,7 @@ typedef void(^completionHandler)();
 
 -(void)refresh{
     [self.refreshControl beginRefreshing];
+    [self collapseTableView:nil];
     [self getTableData:^(){
         [self spinAllDisclosuresUp];
         [self.refreshControl endRefreshing];
@@ -62,6 +63,15 @@ typedef void(^completionHandler)();
 
 -(void)getTableData:(completionHandler)handler {
     self.clubCategoryManager = [[ClubCategoryManager alloc] init];
+    
+    //Favorites
+    PFUser *user = [PFUser currentUser];
+    for (PFObject *club in user[@"favoriteClubs"]) {
+        [club fetchIfNeeded];
+        [self.clubCategoryManager addClub:club withCategoryName:@"Favorites"];
+    }
+    
+    //Other categories
     PFQuery *clubsQuery = [PFQuery queryWithClassName:@"Clubs"];
     [clubsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
         if (!error) {
@@ -142,7 +152,6 @@ typedef void(^completionHandler)();
             [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
         }
     } else {
-        ClubCell *cell = (ClubCell*)[tableView cellForRowAtIndexPath:indexPath];
         NSCClubDetailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"clubDetail"];
         [self.navigationController pushViewController:detailViewController animated:YES];
         [detailViewController view];
