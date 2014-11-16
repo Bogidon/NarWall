@@ -27,5 +27,4 @@
     [self.private__Clubs addObject: club];
     self.clubs = [NSArray arrayWithArray:self.private__Clubs];
 }
-
 @end

@@ -55,5 +55,4 @@
     [self.private__Categories addObject:category];
     self.categories = [NSArray arrayWithArray:self.private__Categories];
 }
-
 @end

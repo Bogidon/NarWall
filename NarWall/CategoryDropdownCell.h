@@ -8,11 +8,15 @@
 
 @import UIKit;
 @class ClubCategory;
-
+NS_ENUM(int16_t, NSCPointerDirection){
+    NSCPointerDirectionUp = 1,
+    NSCPointerDirectionDown = 0
+};
 @interface CategoryDropdownCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *disclosureView;
+@property (nonatomic) int16_t direction;
 @property ClubCategory *clubCategory;
 
 -(void)spinWithOptions:(UIViewAnimationOptions)options;

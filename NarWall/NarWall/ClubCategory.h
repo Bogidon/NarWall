@@ -16,5 +16,4 @@
 @property BOOL isVisible;
 
 - (void)addClub:(PFObject*)club;
-
 @end

@@ -18,9 +18,11 @@
     NSMutableArray *clubs;
     NSMutableArray *totalArray;
 }
-
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property ClubCategoryManager *clubCategoryManager;
-
+-(void)refresh;
+-(void)getClubData;
+-(void)reloadTableViewData;
 @end
 
 @implementation ClubsTableViewController
@@ -30,11 +32,28 @@
     
     self.tableView.backgroundColor = [UIColor colorWithRed:255/255.0 green:246/255.0 blue:229/255.0 alpha:1.0];
     self.title = @"Clubs";
-    self.clubCategoryManager = [[ClubCategoryManager alloc] init];
     clubs = [NSMutableArray array];
     categories = [NSMutableArray array];
-    
-    //Get club data
+    [self reloadTableViewData];
+    //Configure settings button
+    self.settingsBarButtonItem.title = @"\u2699";
+    UIFont *settingsFont = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:24.0];
+    NSDictionary *settingsAttributeDict = [[NSDictionary alloc] initWithObjectsAndKeys:settingsFont, NSFontAttributeName, nil];
+    [self.settingsBarButtonItem setTitleTextAttributes:settingsAttributeDict forState:UIControlStateNormal];
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:self.refreshControl];
+}
+-(void)reloadTableViewData{
+    self.clubCategoryManager = [[ClubCategoryManager alloc] init];
+    [self getClubData];
+}
+-(void)refresh{
+    [self.refreshControl beginRefreshing];
+    [self reloadTableViewData];
+    [self.refreshControl endRefreshing];
+}
+-(void)getClubData{
     PFQuery *clubsQuery = [PFQuery queryWithClassName:@"Clubs"];
     [clubsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
         if (!error) {
@@ -49,14 +68,7 @@
             NSLog(@"%@", error);
         }
     }];
-    
-    //Configure settings button
-    self.settingsBarButtonItem.title = @"\u2699";
-    UIFont *settingsFont = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:24.0];
-    NSDictionary *settingsAttributeDict = [[NSDictionary alloc] initWithObjectsAndKeys:settingsFont, NSFontAttributeName, nil];
-    [self.settingsBarButtonItem setTitleTextAttributes:settingsAttributeDict forState:UIControlStateNormal];
 }
-
 #pragma mark - Table View Layout
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.clubCategoryManager numberOfVisibleClubsAtIndex:section] + 1;
@@ -171,7 +183,8 @@
         case 2: {
             //Sign Out
             [PFUser logOut];
-            [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"login"] animated:YES completion:nil];
+            UIViewController *signInSreen = [self.storyboard instantiateViewControllerWithIdentifier:@"login"];
+            [self presentViewController:signInSreen animated:YES completion:nil];
             break;
         }
         default:

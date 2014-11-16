@@ -83,8 +83,8 @@
             [spinner stopAnimating];
             [spinner removeFromSuperview];
             self.loginButton.hidden = NO;
-            [self.navigationController performSegueWithIdentifier:@"main" sender:self.navigationController];
-            NSLog(@"Login succeeded");
+            UIViewController *mainScreen = [self.storyboard instantiateViewControllerWithIdentifier:@"root"];
+            [self presentViewController:mainScreen animated:YES completion:nil];
         }
     }];
 }
