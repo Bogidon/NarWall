@@ -35,7 +35,11 @@
         }
     } else {
         user[@"favoriteClubs"] = [NSArray array];
-        [user saveEventually];
+        [user saveInBackgroundWithBlock:^(BOOL succeed, NSError *error) {
+            if (error) {
+                [user saveEventually];
+            }
+        }];
     }
     
     UIBarButtonItem *favoritesButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed: self.isFavorited ? @"Favorites Pressed" : @"Favorites"] style:UIBarButtonItemStylePlain target:self action:@selector(addToFavorites:)];
@@ -66,6 +70,9 @@
         user[@"favoriteClubs"] = array;
     }
     
-    [user saveEventually];
-}
+    [user saveInBackgroundWithBlock:^(BOOL succeed, NSError *error) {
+        if (error) {
+            [user saveEventually];
+        }
+    }];}
 @end

@@ -60,7 +60,11 @@
     if(![self.emailField.text isEqualToString:@"email@example.com"] && ![self.emailField.text isEqualToString:@""]){
         self.current.email = self.emailField.text;
     }
-    [[PFUser currentUser] saveEventually];
+    [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeed, NSError *error){
+        if (error) {
+            [[PFUser currentUser] saveEventually];
+        }
+    }];
     self.info = @[self.firstNameField.text, self.lastNameField.text, self.emailField.text].mutableCopy;
     [self dismissKeyboard];
 }
