@@ -38,7 +38,6 @@
 		43D4BC371A184FA3004816DA /* NSCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D4BC361A184FA2004816DA /* NSCTabBarController.m */; };
 		43D4BC3A1A185819004816DA /* NSCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D4BC391A185819004816DA /* NSCNavigationController.m */; };
 		43D4BC3D1A1883E1004816DA /* NSCClubDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D4BC3C1A1883E1004816DA /* NSCClubDetailViewController.m */; };
-		43D4BC3E1A18EA5D004816DA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43A7ABD81A1700E500C5C6AC /* Info.plist */; };
 		4C41AB531A187373005EEBF6 /* NSCProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C41AB521A187373005EEBF6 /* NSCProfileViewController.m */; };
 		4C60C3731A171B1700960F7F /* ITCFranklinGothicStd-Hvy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60C3721A171B1600960F7F /* ITCFranklinGothicStd-Hvy.otf */; };
 		4C60C3751A171BAB00960F7F /* ITCFranklinGothicStd-Med.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C60C3741A171BAB00960F7F /* ITCFranklinGothicStd-Med.otf */; };
@@ -416,7 +415,6 @@
 				43A7ABE81A1700E600C5C6AC /* LaunchScreen.xib in Resources */,
 				4C60C3751A171BAB00960F7F /* ITCFranklinGothicStd-Med.otf in Resources */,
 				43A7ABE51A1700E600C5C6AC /* Images.xcassets in Resources */,
-				43D4BC3E1A18EA5D004816DA /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
