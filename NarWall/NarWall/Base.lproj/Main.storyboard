@@ -13,12 +13,14 @@
             <string>ITCFranklinGothicStd-Book</string>
             <string>ITCFranklinGothicStd-Book</string>
             <string>ITCFranklinGothicStd-Book</string>
+            <string>ITCFranklinGothicStd-Book</string>
         </mutableArray>
         <mutableArray key="ITCFranklinGothicStd-Hvy.otf">
             <string>ITCFranklinGothicStd-Hvy</string>
             <string>ITCFranklinGothicStd-Hvy</string>
         </mutableArray>
         <mutableArray key="ITCFranklinGothicStd-Med.otf">
+            <string>ITCFranklinGothicStd-Med</string>
             <string>ITCFranklinGothicStd-Med</string>
             <string>ITCFranklinGothicStd-Med</string>
             <string>ITCFranklinGothicStd-Med</string>
@@ -429,7 +431,7 @@
                                     <rect key="frame" x="16" y="93" width="52" height="21"/>
                                 </variation>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TMJ-km-Liv">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TMJ-km-Liv">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -563,7 +565,7 @@
                                         <exclude reference="KfW-ar-Pwp"/>
                                     </mask>
                                 </variation>
-                            </textField>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.96470588235294119" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -573,18 +575,6 @@
                                 <exclude reference="DSc-KO-20y"/>
                                 <exclude reference="Rj2-Dc-Iqj"/>
                                 <exclude reference="lTZ-VD-zFP"/>
-                                <exclude reference="UAF-vR-3w8"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="eLS-am-tlu"/>
-                                <exclude reference="fhe-XJ-PMc"/>
-                                <exclude reference="JiW-bX-Nq0"/>
-                                <exclude reference="VUG-PH-mu4"/>
-                                <exclude reference="vSt-cL-v32"/>
-                                <exclude reference="CjB-DI-qAI"/>
-                                <exclude reference="I6r-Tf-n6F"/>
-                                <exclude reference="R94-2J-uqp"/>
-                                <exclude reference="not-TQ-qAg"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -594,18 +584,6 @@
                                 <include reference="DSc-KO-20y"/>
                                 <include reference="Rj2-Dc-Iqj"/>
                                 <include reference="lTZ-VD-zFP"/>
-                                <include reference="UAF-vR-3w8"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="eLS-am-tlu"/>
-                                <include reference="fhe-XJ-PMc"/>
-                                <include reference="JiW-bX-Nq0"/>
-                                <include reference="VUG-PH-mu4"/>
-                                <include reference="vSt-cL-v32"/>
-                                <include reference="CjB-DI-qAI"/>
-                                <include reference="I6r-Tf-n6F"/>
-                                <include reference="R94-2J-uqp"/>
-                                <include reference="not-TQ-qAg"/>
                             </mask>
                         </variation>
                     </view>
@@ -617,7 +595,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="emailField" destination="UAF-vR-3w8" id="X3C-9f-lKM"/>
                         <outlet property="firstNameField" destination="the-pk-tpw" id="XFa-hj-SaA"/>
                         <outlet property="lastNameField" destination="ERM-e9-wig" id="9zP-Nr-C3H"/>
                         <outlet property="saveButton" destination="pis-12-aME" id="iYl-a9-eIe"/>
@@ -1807,7 +1784,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Favorites" width="313" height="72"/>
+        <image name="Favorites" width="22" height="22"/>
         <image name="collapse" width="22" height="22"/>
         <image name="detailDisclosure" width="12" height="12"/>
         <image name="login" width="111" height="55"/>
