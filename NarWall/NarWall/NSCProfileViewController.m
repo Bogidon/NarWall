@@ -11,15 +11,18 @@
 @interface NSCProfileViewController ()
 @property (strong, nonatomic) PFUser *current;
 @property (strong, nonatomic) NSMutableArray *info;
--(void)hideSaveButton;
--(void)showSaveButton;
+-(void)hideBarButtons;
+-(void)showBarButtons;
+-(void)cancelEditing;
+-(void)dismissKeyboard;
 @end
 @implementation NSCProfileViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.firstNameField.delegate = self;
+    self.lastNameField.delegate = self;
+    self.emailField.delegate = self;
     // Do any additional setup after loading the view.
-    [self hideSaveButton];
     if(self.current.email){
         self.emailField.text = self.current.email;
         self.emailField.clearsOnBeginEditing = NO;
@@ -45,23 +48,8 @@
         self.lastNameField.clearsOnBeginEditing = YES;
     }
     self.info = @[self.firstNameField.text, self.lastNameField.text, self.emailField.text].mutableCopy;
+    [self hideBarButtons];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 -(IBAction)save:(UIBarButtonItem *)sender{
     if(![self.firstNameField.text isEqualToString:@"Your First Name"] && ![self.firstNameField.text isEqualToString:@""]){
         [self.current setObject:self.firstNameField.text forKey:@"firstName"];
@@ -73,6 +61,17 @@
         self.current.email = self.emailField.text;
     }
     [[PFUser currentUser] saveInBackground];
+    self.info = @[self.firstNameField.text, self.lastNameField.text, self.emailField.text].mutableCopy;
+    [self dismissKeyboard];
+}
+-(void)cancelEditing{
+    [self dismissKeyboard];
+    self.firstNameField.text = (NSString *)self.info[0];
+    self.lastNameField.text = (NSString *)self.info[1];
+    self.emailField.text = (NSString *)self.info[2];
+    [self hideBarButtons];
+}
+-(void)dismissKeyboard{
     if(self.firstNameField.isEditing){
         [self.firstNameField endEditing:YES];
     }
@@ -84,18 +83,22 @@
     }
 }
 #pragma mark - UI Helper Methods
--(void)hideSaveButton{
-    NSMutableArray *toolbar = self.toolbarItems.mutableCopy;
-    if([toolbar containsObject:self.saveButton]){
-        [toolbar removeObject:self.saveButton];
-        [self setToolbarItems:toolbar animated:YES];
+-(void)hideBarButtons{
+    if(self.navigationItem.rightBarButtonItem){
+        self.navigationItem.rightBarButtonItem = nil;
+    }
+    if(self.navigationItem.leftBarButtonItem){
+        self.navigationItem.leftBarButtonItem = nil;
     }
 }
--(void)showSaveButton{
-    NSMutableArray *toolbar = self.toolbarItems.mutableCopy;
-    if(![toolbar containsObject:self.saveButton]){
-        [toolbar addObject:self.saveButton];
-        [self setToolbarItems:toolbar animated:YES];
+-(void)showBarButtons{
+    NSLog(@"Save button should appear");
+    if(!self.navigationItem.rightBarButtonItem){
+        UIBarButtonItem *save = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save)];
+        UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelEditing)];
+        self.navigationItem.leftBarButtonItem = cancel;
+        self.navigationItem.rightBarButtonItem = save;
+        NSLog(@"%@", save);
     }
 }
 #pragma mark - @property Lazy Instantiation
@@ -107,7 +110,7 @@
 }
 #pragma mark - UITextFieldDelegate Protocol Methods
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
-    [self showSaveButton];
+    [self showBarButtons];
 }
 -(void)textFieldDidEndEditing:(UITextField *)textField{
     if(![textField.text isEqualToString:@""]){
