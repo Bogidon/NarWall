@@ -7,7 +7,7 @@
 //
 
 @import UIKit;
-@interface NSCProfileViewController : UIViewController <UITextFieldDelegate, UITextInputDelegate>
+@interface NSCProfileViewController : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *firstNameField;
 @property (weak, nonatomic) IBOutlet UITextField *lastNameField;
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
