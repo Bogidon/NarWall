@@ -17,6 +17,7 @@
         </mutableArray>
         <mutableArray key="ITCFranklinGothicStd-Hvy.otf">
             <string>ITCFranklinGothicStd-Hvy</string>
+            <string>ITCFranklinGothicStd-Hvy</string>
         </mutableArray>
         <mutableArray key="ITCFranklinGothicStd-Med.otf">
             <string>ITCFranklinGothicStd-Med</string>
@@ -375,7 +376,7 @@
         <!--You-->
         <scene sceneID="vbE-Tb-9w3">
             <objects>
-                <viewController id="ZYE-Bm-dcT" sceneMemberID="viewController">
+                <viewController id="ZYE-Bm-dcT" customClass="NSCProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9wm-oH-UCk"/>
                         <viewControllerLayoutGuide type="bottom" id="kAg-zd-KOo"/>
@@ -384,22 +385,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your First Name" placeholder="Your First Name" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="the-pk-tpw">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Michael" placeholder="Your First Name" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="the-pk-tpw">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="51"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="133" width="368" height="37"/>
+                                    <rect key="frame" x="16" y="133" width="368" height="61"/>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your Last Name" placeholder="Your Last Name" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ERM-e9-wig">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hulet" placeholder="Your Last Name" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="ERM-e9-wig">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="51"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="215" width="368" height="39"/>
+                                    <rect key="frame" x="16" y="215" width="368" height="61"/>
                                 </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSc-KO-20y">
@@ -407,7 +408,7 @@
                                 <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Hvy" family="ITC Franklin Gothic Std" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="348" width="51" height="21"/>
+                                    <rect key="frame" x="16" y="386" width="51" height="21"/>
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rj2-Dc-Iqj">
@@ -418,6 +419,24 @@
                                     <rect key="frame" x="16" y="424" width="368" height="30"/>
                                 </variation>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTZ-VD-zFP">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Hvy" family="ITC Franklin Gothic Std" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="93" width="52" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="hello@world.com" placeholder="email@example.com" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="UAF-vR-3w8">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="51"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="415" width="368" height="61"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.96470588235294119" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -426,6 +445,8 @@
                                 <exclude reference="ERM-e9-wig"/>
                                 <exclude reference="DSc-KO-20y"/>
                                 <exclude reference="Rj2-Dc-Iqj"/>
+                                <exclude reference="lTZ-VD-zFP"/>
+                                <exclude reference="UAF-vR-3w8"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -434,13 +455,25 @@
                                 <include reference="ERM-e9-wig"/>
                                 <include reference="DSc-KO-20y"/>
                                 <include reference="Rj2-Dc-Iqj"/>
+                                <include reference="lTZ-VD-zFP"/>
+                                <include reference="UAF-vR-3w8"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="You" id="Dvh-RL-CoQ">
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="J2K-le-0tg"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="pis-12-aME"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="pis-12-aME">
+                            <connections>
+                                <action selector="save:" destination="ZYE-Bm-dcT" id="nZj-KG-fo0"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailField" destination="UAF-vR-3w8" id="X3C-9f-lKM"/>
+                        <outlet property="firstNameField" destination="the-pk-tpw" id="XFa-hj-SaA"/>
+                        <outlet property="lastNameField" destination="ERM-e9-wig" id="9zP-Nr-C3H"/>
+                        <outlet property="saveButton" destination="pis-12-aME" id="iYl-a9-eIe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxg-Uy-9zZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
