@@ -36,6 +36,7 @@
             <string>ITCFranklinGothicStd-Med</string>
             <string>ITCFranklinGothicStd-Med</string>
             <string>ITCFranklinGothicStd-Med</string>
+            <string>ITCFranklinGothicStd-Med</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -1405,6 +1406,33 @@
                                         <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Book" family="ITC Franklin Gothic Std" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLv-Sx-Udk">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="JLv-Sx-Udk" secondAttribute="height" multiplier="611:136" id="3Me-Mr-gDH"/>
+                                            <constraint firstAttribute="width" constant="611" id="wwK-9Y-S6q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Med" family="ITC Franklin Gothic Std" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="3" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Bogdan Vitoc" backgroundImage="Mail Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="3Me-Mr-gDH"/>
+                                                <exclude reference="wwK-9Y-S6q"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="3Me-Mr-gDH"/>
+                                                <exclude reference="wwK-9Y-S6q"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="emailContact:" destination="Zze-mu-5n5" eventType="touchUpInside" id="Xht-rN-La3"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="KZ5-lz-gMl" firstAttribute="leading" secondItem="vMp-9h-1Li" secondAttribute="leading" constant="120" id="0gh-FH-7Ke">
@@ -1416,6 +1444,9 @@
                                         <variation key="widthClass=compact" constant="8"/>
                                     </constraint>
                                     <constraint firstItem="oh5-bC-99L" firstAttribute="leading" secondItem="rGO-BG-BHC" secondAttribute="trailing" constant="8" id="3oB-2p-bXA"/>
+                                    <constraint firstItem="JLv-Sx-Udk" firstAttribute="top" secondItem="SXB-Hq-dKx" secondAttribute="bottom" constant="-9" id="4NS-Jg-oMl">
+                                        <variation key="widthClass=compact" constant="8"/>
+                                    </constraint>
                                     <constraint firstItem="6O9-RY-QXa" firstAttribute="height" secondItem="50y-pd-DPD" secondAttribute="height" id="66q-Xc-U84"/>
                                     <constraint firstAttribute="trailing" secondItem="1hU-0Z-2Kw" secondAttribute="trailing" constant="8" id="7m6-8Q-G8J"/>
                                     <constraint firstItem="dML-ir-ZcH" firstAttribute="bottom" secondItem="KZ5-lz-gMl" secondAttribute="top" id="7zT-mf-B9t">
@@ -1429,6 +1460,9 @@
                                     </constraint>
                                     <constraint firstItem="1hU-0Z-2Kw" firstAttribute="leading" secondItem="vMp-9h-1Li" secondAttribute="leading" constant="8" id="CXn-VD-l3U"/>
                                     <constraint firstItem="rGO-BG-BHC" firstAttribute="top" secondItem="KZ5-lz-gMl" secondAttribute="bottom" constant="16" id="DmA-Sw-ErG"/>
+                                    <constraint firstItem="JLv-Sx-Udk" firstAttribute="leading" secondItem="SXB-Hq-dKx" secondAttribute="leading" constant="158" id="Dnk-Ga-heM">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
                                     <constraint firstItem="pPT-4u-YNM" firstAttribute="leading" secondItem="SXB-Hq-dKx" secondAttribute="leading" constant="-8" id="GIV-gY-SAB">
                                         <variation key="widthClass=compact" constant="0.0"/>
                                     </constraint>
@@ -1468,6 +1502,9 @@
                                         <variation key="widthClass=compact" constant="0.0"/>
                                     </constraint>
                                     <constraint firstAttribute="centerX" secondItem="1hU-0Z-2Kw" secondAttribute="centerX" id="fD5-bO-NoI"/>
+                                    <constraint firstItem="JLv-Sx-Udk" firstAttribute="trailing" secondItem="SXB-Hq-dKx" secondAttribute="trailing" constant="401" id="fX9-L6-WAP">
+                                        <variation key="widthClass=compact" constant="-60"/>
+                                    </constraint>
                                     <constraint firstItem="pPT-4u-YNM" firstAttribute="leading" secondItem="vMp-9h-1Li" secondAttribute="leading" constant="42" id="fct-e5-Pon">
                                         <variation key="widthClass=compact" constant="8"/>
                                     </constraint>
@@ -1529,6 +1566,7 @@
                                         <exclude reference="96t-DQ-YpX"/>
                                         <exclude reference="SXB-Hq-dKx"/>
                                         <exclude reference="pPT-4u-YNM"/>
+                                        <exclude reference="JLv-Sx-Udk"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="7zT-mf-B9t"/>
@@ -1572,6 +1610,9 @@
                                         <exclude reference="I30-zA-cXu"/>
                                         <exclude reference="jeh-O5-0B3"/>
                                         <exclude reference="ng4-vV-pNY"/>
+                                        <exclude reference="4NS-Jg-oMl"/>
+                                        <exclude reference="Dnk-Ga-heM"/>
+                                        <exclude reference="fX9-L6-WAP"/>
                                         <exclude reference="66q-Xc-U84"/>
                                         <exclude reference="Kxi-EI-pyh"/>
                                         <exclude reference="pTY-OH-umV"/>
@@ -1598,6 +1639,7 @@
                                         <include reference="96t-DQ-YpX"/>
                                         <include reference="SXB-Hq-dKx"/>
                                         <include reference="pPT-4u-YNM"/>
+                                        <include reference="JLv-Sx-Udk"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="7zT-mf-B9t"/>
@@ -1641,6 +1683,9 @@
                                         <include reference="I30-zA-cXu"/>
                                         <include reference="jeh-O5-0B3"/>
                                         <include reference="ng4-vV-pNY"/>
+                                        <include reference="4NS-Jg-oMl"/>
+                                        <include reference="Dnk-Ga-heM"/>
+                                        <include reference="fX9-L6-WAP"/>
                                         <include reference="66q-Xc-U84"/>
                                         <include reference="Kxi-EI-pyh"/>
                                         <exclude reference="Spx-pb-Ar5"/>
@@ -1714,6 +1759,7 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="contactButton" destination="JLv-Sx-Udk" id="4Va-c8-FE4"/>
                         <outlet property="descriptionTextView" destination="1hU-0Z-2Kw" id="83f-n8-Mfb"/>
                         <outlet property="locationLabel" destination="jMv-P8-odV" id="wTc-7i-Tt2"/>
                         <outlet property="meetingLabel" destination="oh5-bC-99L" id="lJk-8Z-9Lj"/>
@@ -1747,6 +1793,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Mail Button" width="556" height="136"/>
         <image name="collapse" width="22" height="22"/>
         <image name="detailDisclosure" width="12" height="12"/>
         <image name="login" width="111" height="55"/>
