@@ -15,6 +15,9 @@
             <string>ITCFranklinGothicStd-Book</string>
             <string>ITCFranklinGothicStd-Book</string>
         </mutableArray>
+        <mutableArray key="ITCFranklinGothicStd-Hvy.otf">
+            <string>ITCFranklinGothicStd-Hvy</string>
+        </mutableArray>
         <mutableArray key="ITCFranklinGothicStd-Med.otf">
             <string>ITCFranklinGothicStd-Med</string>
             <string>ITCFranklinGothicStd-Med</string>
@@ -369,7 +372,7 @@
             </objects>
             <point key="canvasLocation" x="1033.5" y="1742"/>
         </scene>
-        <!--Events-->
+        <!--You-->
         <scene sceneID="vbE-Tb-9w3">
             <objects>
                 <viewController id="ZYE-Bm-dcT" sceneMemberID="viewController">
@@ -380,13 +383,68 @@
                     <view key="view" contentMode="scaleToFill" id="5JH-m5-7AV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your First Name" placeholder="Your First Name" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="the-pk-tpw">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="133" width="368" height="37"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your Last Name" placeholder="Your Last Name" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ERM-e9-wig">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="215" width="368" height="39"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSc-KO-20y">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="ITCFranklinGothicStd-Hvy" family="ITC Franklin Gothic Std" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="348" width="51" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rj2-Dc-Iqj">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="424" width="368" height="30"/>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.96470588235294119" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="the-pk-tpw"/>
+                                <exclude reference="ERM-e9-wig"/>
+                                <exclude reference="DSc-KO-20y"/>
+                                <exclude reference="Rj2-Dc-Iqj"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="the-pk-tpw"/>
+                                <include reference="ERM-e9-wig"/>
+                                <include reference="DSc-KO-20y"/>
+                                <include reference="Rj2-Dc-Iqj"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="-1" title="Events" id="p71-IV-Mwx"/>
+                    <navigationItem key="navigationItem" title="You" id="Dvh-RL-CoQ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="J2K-le-0tg"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="pis-12-aME"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxg-Uy-9zZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1033.5" y="980"/>
+            <point key="canvasLocation" x="1951.5" y="980"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="P5c-8F-8iq">
@@ -400,7 +458,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="JeF-es-3Hb" kind="relationship" relationship="viewControllers" id="H4F-xo-0xp"/>
-                        <segue destination="ZYE-Bm-dcT" kind="relationship" relationship="viewControllers" id="o9A-GU-3di"/>
+                        <segue destination="PXj-UN-x81" kind="relationship" relationship="viewControllers" id="o9A-GU-3di"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zIc-W0-53g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1533,6 +1591,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3l-pP-qY1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2370" y="312"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="CdF-jC-fbz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PXj-UN-x81" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="-1" title="Profile" id="p71-IV-Mwx"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aXm-zx-y0s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZYE-Bm-dcT" kind="relationship" relationship="rootViewController" id="VYA-HF-WCC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E0K-fg-F59" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1033.5" y="980"/>
         </scene>
     </scenes>
     <resources>
