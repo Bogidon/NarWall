@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B23" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Z3L-T1-QAJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A386a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Z3L-T1-QAJ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -1783,11 +1783,15 @@
                                         <exclude reference="Qh9-fg-POG"/>
                                         <exclude reference="oVh-Z4-YvE"/>
                                         <exclude reference="sba-Fh-tnG"/>
+<<<<<<< HEAD
+                                        <exclude reference="Kbl-IG-1y7"/>
+=======
                                         <exclude reference="8be-VH-JJ8"/>
                                         <exclude reference="Kbl-IG-1y7"/>
                                         <exclude reference="T2h-rN-Kai"/>
                                         <exclude reference="sRB-b7-ecc"/>
                                         <exclude reference="xf6-fj-OOd"/>
+>>>>>>> Basically working
                                         <exclude reference="4NS-Jg-oMl"/>
                                         <exclude reference="Dnk-Ga-heM"/>
                                         <exclude reference="fX9-L6-WAP"/>
@@ -1864,11 +1868,15 @@
                                         <include reference="Qh9-fg-POG"/>
                                         <exclude reference="oVh-Z4-YvE"/>
                                         <include reference="sba-Fh-tnG"/>
+<<<<<<< HEAD
+                                        <include reference="Kbl-IG-1y7"/>
+=======
                                         <exclude reference="8be-VH-JJ8"/>
                                         <exclude reference="Kbl-IG-1y7"/>
                                         <include reference="T2h-rN-Kai"/>
                                         <exclude reference="sRB-b7-ecc"/>
                                         <include reference="xf6-fj-OOd"/>
+>>>>>>> Basically working
                                         <include reference="4NS-Jg-oMl"/>
                                         <include reference="Dnk-Ga-heM"/>
                                         <include reference="fX9-L6-WAP"/>

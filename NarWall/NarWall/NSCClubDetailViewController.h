@@ -17,8 +17,10 @@
 @property (weak, nonatomic) IBOutlet UITextView *membersTextView;
 @property (weak, nonatomic) IBOutlet UIImageView *verifiedIconImageView;
 @property (weak, nonatomic) IBOutlet UIButton *contactButton;
+@property (weak, nonatomic) IBOutlet UIButton *joinButton;
 
 - (void)setPFObject:(PFObject*)pfObject;
 - (IBAction)emailContact:(UIButton *)sender;
+- (IBAction)join:(UIButton *)sender;
 
 @end
