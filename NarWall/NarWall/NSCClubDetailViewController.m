@@ -24,18 +24,9 @@
     self.locationLabel.text = pfObject[@"location"];
     [self.contactButton setTitle:pfObject[@"contactName"] forState:UIControlStateNormal];
     self.membersTextView.text = @"";
+    self.membersTextView.text = [self getMembersString:pfObject];
     
-    if (!pfObject[@"members"]) {
-        pfObject[@"members"] = [NSMutableArray array];
-        [pfObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
-            if (error || !succeeded) {
-                [pfObject saveEventually];
-            }
-        }];
-    }
-    for (PFUser *member in pfObject[@"members"]) {
-        self.membersTextView.text = [NSString stringWithFormat:@"%@, %@ %@", self.membersTextView.text, member[@"firstName"], member[@"lastName"]];
-    }
+
     
     PFUser *user = [PFUser currentUser];
     self.isFavorited = NO;
@@ -92,4 +83,44 @@
             [user saveEventually];
         }
     }];}
+- (IBAction)join:(UIButton *)sender {
+    if ([sender.titleLabel.text isEqualToString:@"Join"]) {
+        [sender setTitle:@"Leave" forState:UIControlStateNormal];
+    } else {
+        [sender setTitle:@"Join" forState:UIControlStateNormal];
+        return;
+    }
+    
+    
+    PFQuery *query = [PFUser query];
+    [query getObjectInBackgroundWithId:[PFUser currentUser].objectId block:^(PFObject *fullUser, NSError *error) {
+        if (!error) {
+            [self.club addObject:fullUser forKey:@"members"];
+            [self.club saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (!error && succeeded) {
+                    self.membersTextView.text = [self getMembersString:self.club];
+                }
+            }];
+        }
+    }];
+}
+
+- (NSString*)getMembersString:(PFObject*)pfObject {
+    [pfObject fetchIfNeeded];
+    if (!pfObject[@"members"]) {
+        pfObject[@"members"] = [NSMutableArray array];
+        [pfObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
+            if (error || !succeeded) {
+                [pfObject saveEventually];
+            }
+        }];
+    }
+    NSString *membersText = @"";
+    for (PFUser *member in pfObject[@"members"]) {
+        [member fetchIfNeeded];
+        membersText = [NSString stringWithFormat:@"%@ %@ %@", self.membersTextView.text.length > 0 ? [NSString stringWithFormat:@"%@,",self.membersTextView.text] : @"" , member[@"firstName"], member[@"lastName"]];
+    }
+    return membersText;
+}
+
 @end
