@@ -1593,12 +1593,14 @@
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="Uni-66-FlX"/>
+                                                <exclude reference="iJv-xt-BbV"/>
                                                 <exclude reference="tHT-HU-asE"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact">
                                             <mask key="constraints">
                                                 <exclude reference="Uni-66-FlX"/>
+                                                <include reference="iJv-xt-BbV"/>
                                                 <include reference="tHT-HU-asE"/>
                                             </mask>
                                         </variation>
@@ -1756,6 +1758,10 @@
                                         <exclude reference="8Kg-9O-oeQ"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <exclude reference="7zT-mf-B9t"/>
+                                        <exclude reference="RQW-1t-XRA"/>
+                                        <exclude reference="jPe-uQ-lg3"/>
+                                        <exclude reference="vR5-2D-z6Y"/>
                                         <exclude reference="3LO-Z9-crp"/>
                                         <exclude reference="GO5-2A-Etq"/>
                                         <exclude reference="GjR-bG-xoL"/>
@@ -1833,6 +1839,10 @@
                                         <include reference="8Kg-9O-oeQ"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <include reference="7zT-mf-B9t"/>
+                                        <include reference="RQW-1t-XRA"/>
+                                        <include reference="jPe-uQ-lg3"/>
+                                        <include reference="vR5-2D-z6Y"/>
                                         <exclude reference="3LO-Z9-crp"/>
                                         <include reference="GO5-2A-Etq"/>
                                         <exclude reference="GjR-bG-xoL"/>
