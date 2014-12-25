@@ -7,7 +7,5 @@
 //
 
 @import UIKit;
-
 @interface NSCTabBarController : UITabBarController
-
 @end

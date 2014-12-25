@@ -18,6 +18,5 @@ NS_ENUM(int16_t, NSCPointerDirection){
 @property (weak, nonatomic) IBOutlet UIImageView *disclosureView;
 @property (nonatomic) int16_t direction;
 @property ClubCategory *clubCategory;
-
 -(void)spinWithOptions:(UIViewAnimationOptions)options;
 @end
